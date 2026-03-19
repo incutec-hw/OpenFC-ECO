@@ -1,0 +1,52 @@
+# KiCad backup files
+*.bak
+*-backups/
+_autosave-*
+*~
+~*.lck
+
+# KiCad lock files
+*.lck
+
+# KiCad local settings
+*.kicad_prl
+fp-info-cache
+
+# KiCad autosave
+\#auto_saved_files#
+
+# Generated JSON (extraction scripts output)
+extracted_*.json
+ext2_*.json
+netlist_*.json
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Stencil output
+stencil_out/
+
+# Production backups (keep main production files, not backups)
+hardware/production/backups/
+
+# Generated exports (paste stencils, BOM)
+hardware/bom/
+hardware/*_Paste.dxf
+hardware/*_Paste.svg
+
+# Downloaded datasheets (regenerable)
+datasheets/
+
+# Claude local settings
+.claude/

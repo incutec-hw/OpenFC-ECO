@@ -1,0 +1,257 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0") (uuid "afddf432-5663-4c70-b919-7bd58439e166") (paper "A5") (lib_symbols 
+
+(symbol "Device:C" (pin_numbers (hide yes)) (pin_names (offset 0.254)) (exclude_from_sim no) (in_bom yes) (on_board yes) 
+
+(property "Reference" "C" (at 0.635 2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "C" (at 0.635 -2.54 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "" (at 0.9652 -3.81 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Unpolarized capacitor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_keywords" "cap capacitor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_fp_filters" "C_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(symbol "C_0_1" 
+
+(polyline (pts 
+
+(xy -2.032 0.762) 
+
+(xy 2.032 0.762)) (stroke (width 0.508) (type default)) (fill (type none))) 
+
+(polyline (pts 
+
+(xy -2.032 -0.762) 
+
+(xy 2.032 -0.762)) (stroke (width 0.508) (type default)) (fill (type none)))) 
+
+(symbol "C_1_1" (pin passive line (at 0 3.81 270) (length 2.794) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin passive line (at 0 -3.81 90) (length 2.794) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+
+(symbol "lib:LIS3MDLTR" (exclude_from_sim no) (in_bom yes) (on_board yes) 
+
+(property "Reference" "U31" (at 0 10.16 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Value" "LIS3MDLTR" (at 8.382 11.43 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "lib:LGA-12_L2.0-W2.0-P0.50-BL" (at 0 -13.97 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_STMicroelectronics-LIS3MDLTR_C478483.html" (at 0 -16.51 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "LCSC Part" "C478483" (at 0 -19.05 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(symbol "LIS3MDLTR_0_1" 
+
+(rectangle (start -17.78 8.89) (end 17.78 -8.89) (stroke (width 0) (type default)) (fill (type background))) (circle (center -16.51 7.62) (radius 0.38) (stroke (width 0) (type default)) (fill (type none))) (pin unspecified line (at -20.32 1.27 0) (length 2.54) (name "Res" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -20.32 -1.27 0) (length 2.54) (name "Res" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -20.32 -3.81 0) (length 2.54) (name "INT" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -20.32 -6.35 0) (length 2.54) (name "DRDY" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -6.35 11.43 270) (length 2.54) (name "CS" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -3.81 11.43 270) (length 2.54) (name "C1" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -2.54 -11.43 90) (length 2.54) (name "SD0/SA1" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27))))) (pin unspecified line (at -1.27 11.43 270) (length 2.54) (name "Vdd_IO" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 0 -11.43 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 1.27 11.43 270) (length 2.54) (name "Vdd" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 20.32 1.27 180) (length 2.54) (name "SCL/SPC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin unspecified line (at 20.32 -1.27 180) (length 2.54) (name "SDA/SDI/SDO" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+
+(symbol "power:+3.3V" (power) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) 
+
+(property "Reference" "#PWR" (at 0 -3.81 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Value" "+3.3V" (at 0 3.556 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_keywords" "global power" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(symbol "+3.3V_0_1" 
+
+(polyline (pts 
+
+(xy -0.762 1.27) 
+
+(xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none))) 
+
+(polyline (pts 
+
+(xy 0 2.54) 
+
+(xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none))) 
+
+(polyline (pts 
+
+(xy 0 0) 
+
+(xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))) 
+
+(symbol "+3.3V_1_1" (pin power_in line (at 0 0 90) (length 0) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no)) 
+
+(symbol "power:GND" (power) (pin_numbers (hide yes)) (pin_names (offset 0) (hide yes)) (exclude_from_sim no) (in_bom yes) (on_board yes) 
+
+(property "Reference" "#PWR" (at 0 -6.35 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Value" "GND" (at 0 -3.81 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "ki_keywords" "global power" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(symbol "GND_0_1" 
+
+(polyline (pts 
+
+(xy 0 0) 
+
+(xy 0 -1.27) 
+
+(xy 1.27 -1.27) 
+
+(xy 0 -2.54) 
+
+(xy -1.27 -1.27) 
+
+(xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))) 
+
+(symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))) (embedded_fonts no))) 
+
+(text "Place far from magnetic interference sources" (exclude_from_sim no) (at 66.04 95.758 0) (effects (font (size 1.27 1.27))) (uuid "9e584c05-de81-4a5b-989f-a8368d86b29a")) 
+
+(junction (at 102.87 60.96) (diameter 0) (color 0 0 0 0) (uuid "0263f0c3-032a-41ee-a693-813a0352abe9")) 
+
+(junction (at 102.87 83.82) (diameter 0) (color 0 0 0 0) (uuid "2a093b01-f0f0-4112-a733-fac0caf1b5b3")) 
+
+(junction (at 97.79 60.96) (diameter 0) (color 0 0 0 0) (uuid "357f62f3-152d-483d-99c7-4f27b6008458")) 
+
+(junction (at 78.74 48.26) (diameter 0) (color 0 0 0 0) (uuid "61f69f16-ec84-4d33-9f66-0187cb750bf9")) 
+
+(junction (at 100.33 60.96) (diameter 0) (color 0 0 0 0) (uuid "f278885b-cdf3-455f-9d19-5aca73d36f5f")) (no_connect (at 83.82 71.12) (uuid "4ce84139-8b3b-435f-bc0d-3ddf463ce36f")) (no_connect (at 83.82 76.2) (uuid "78086847-07a1-47aa-b658-e077b0389bee")) (no_connect (at 83.82 73.66) (uuid "dd071b58-5893-41bc-a3f8-42422171aadb")) (no_connect (at 83.82 78.74) (uuid "f89abbb8-ef34-4c61-b35c-2e3646a48437")) 
+
+(wire (pts 
+
+(xy 130.81 73.66) 
+
+(xy 124.46 73.66)) (stroke (width 0) (type default)) (uuid "24efa862-1d37-481f-80e0-a0317d215793")) 
+
+(wire (pts 
+
+(xy 101.6 83.82) 
+
+(xy 102.87 83.82)) (stroke (width 0) (type default)) (uuid "38d3e8fa-b977-4db8-899b-8287e3f9508b")) 
+
+(wire (pts 
+
+(xy 78.74 48.26) 
+
+(xy 97.79 48.26)) (stroke (width 0) (type default)) (uuid "399e1a1f-6d20-4cec-9cc5-bb2a0e2cccb8")) 
+
+(wire (pts 
+
+(xy 130.81 71.12) 
+
+(xy 124.46 71.12)) (stroke (width 0) (type default)) (uuid "3a3a8f4f-1179-4dfe-9721-a65c81ce209a")) 
+
+(wire (pts 
+
+(xy 102.87 60.96) 
+
+(xy 105.41 60.96)) (stroke (width 0) (type default)) (uuid "8d7d6dc2-916c-4e31-b243-81def67240da")) 
+
+(wire (pts 
+
+(xy 100.33 60.96) 
+
+(xy 102.87 60.96)) (stroke (width 0) (type default)) (uuid "a788fc83-f973-46a3-a529-d0c8a743174f")) 
+
+(wire (pts 
+
+(xy 102.87 83.82) 
+
+(xy 104.14 83.82)) (stroke (width 0) (type default)) (uuid "e8c01656-158e-497e-8791-67e49fe3484b")) 
+
+(wire (pts 
+
+(xy 97.79 48.26) 
+
+(xy 97.79 60.96)) (stroke (width 0) (type default)) (uuid "eb65c1c6-a769-4e5a-8e84-0f3c700c01c3")) 
+
+(wire (pts 
+
+(xy 97.79 60.96) 
+
+(xy 100.33 60.96)) (stroke (width 0) (type default)) (uuid "fce5b9a0-4100-4c80-b21b-4632c3b9ed60")) (hierarchical_label "I2C_SDA" (shape input) (at 130.81 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "00a2355b-8168-4bac-9105-570d6b16cbdd")) (hierarchical_label "I2C_SCL" (shape input) (at 130.81 71.12 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0150922c-759a-440a-8513-086bed37c3d9")) 
+
+(symbol (lib_id "power:GND") (at 102.87 83.82 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board no) (dnp yes) (fields_autoplaced yes) (uuid "1314aabe-5314-4f19-914b-7178d55d7027") 
+
+(property "Reference" "#PWR0300" (at 102.87 90.17 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Value" "GND" (at 102.87 88.9 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "" (at 102.87 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "" (at 102.87 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 102.87 83.82 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "0da09eb0-aa32-49f3-9d5d-0cbce4457b28")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f2b07475-b96c-42d9-ab92-1eb92706f969" (reference "#PWR0300") (unit 1))))) 
+
+(symbol (lib_id "power:+3.3V") (at 78.74 48.26 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board no) (dnp yes) (fields_autoplaced yes) (uuid "4f98a188-bbb9-4c18-9565-6a002e55b276") 
+
+(property "Reference" "#PWR0298" (at 78.74 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Value" "+3.3V" (at 78.74 43.18 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "" (at 78.74 48.26 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "" (at 78.74 48.26 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Power symbol creates a global label with name \"+3.3V\"" (at 78.74 48.26 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "4e3243e0-3c98-4e5d-aaf9-93f47bebcf32")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f2b07475-b96c-42d9-ab92-1eb92706f969" (reference "#PWR0298") (unit 1))))) 
+
+(symbol (lib_id "lib:LIS3MDLTR") (at 104.14 72.39 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board no) (dnp yes) (fields_autoplaced yes) (uuid "5ac1a7f4-f788-48a5-9bc7-53e2427bd689") 
+
+(property "Reference" "U31" (at 104.14 62.23 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Value" "LIS3MDLTR" (at 112.522 60.96 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "lib:LGA-12_L2.0-W2.0-P0.50-BL" (at 104.14 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_STMicroelectronics-LIS3MDLTR_C478483.html" (at 104.14 88.9 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "" (at 104.14 72.39 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "LCSC Part" "C478483" (at 104.14 91.44 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "MPN" "LIS3MDLTR" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Manufacturer" "STMicroelectronics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "4" (uuid "04700095-30d4-4cb7-9f5c-bb0127c504a0")) (pin "6" (uuid "d3f43e28-77de-484b-a393-86fbf4de8af8")) (pin "2" (uuid "48a80a07-b40b-4439-9505-c05c45fcad3d")) (pin "3" (uuid "2cc3d9cc-fa5c-489a-9af4-5fa9c21af425")) (pin "1" (uuid "85a95500-18a3-468c-88b0-75681d6a5e47")) (pin "12" (uuid "cbe6b17e-96c1-4ed8-ae0d-255d2516f443")) (pin "7" (uuid "e6827ec7-298e-4113-9e61-b58dd62120a0")) (pin "9" (uuid "1a0501fb-6090-4320-b6d8-84913306c3ef")) (pin "8" (uuid "1ba2f1e8-ca2b-4fae-b9c1-9659e1e1cc7c")) (pin "11" (uuid "50ef0a5f-db5c-4d1f-bddd-1130c717b43f")) (pin "10" (uuid "d47f1cf2-c783-4895-a493-3be70186ec63")) (pin "5" (uuid "ef2967c6-8a1b-4c61-9e8e-303168dc0cec")) (instances (project "" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f2b07475-b96c-42d9-ab92-1eb92706f969" (reference "U31") (unit 1))))) 
+
+(symbol (lib_id "Device:C") (at 78.74 52.07 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board no) (dnp yes) (uuid "d0a1a883-7818-4dd5-ac94-dc2f31f13606") 
+
+(property "Reference" "C113" (at 78.74 49.53 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Value" "100n" (at 82.042 52.07 0) (effects (font (size 1.27 1.27)) (justify left))) 
+
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 79.7052 55.88 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "~" (at 78.74 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "" (at 78.74 52.07 0) (effects (font (size 1.27 1.27)))) 
+
+(property "LCSC" "C1525" (at 78.74 52.07 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "MPN" "CL05B104KO5NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Manufacturer" "Samsung Electro-Mechanics" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "28f197e5-9674-4f77-b43b-8defd7904e07")) (pin "2" (uuid "515c99c7-3e3e-47a1-aa69-7c030c621399")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f2b07475-b96c-42d9-ab92-1eb92706f969" (reference "C113") (unit 1))))) 
+
+(symbol (lib_id "power:GND") (at 78.74 55.88 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board no) (dnp yes) (fields_autoplaced yes) (uuid "d45da4c4-cf6a-4175-8338-8986c8197c04") 
+
+(property "Reference" "#PWR0299" (at 78.74 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Value" "GND" (at 78.74 60.96 0) (effects (font (size 1.27 1.27)))) 
+
+(property "Footprint" "" (at 78.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Datasheet" "" (at 78.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes))) 
+
+(property "Description" "Power symbol creates a global label with name \"GND\" , ground" (at 78.74 55.88 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "0c9e1dbc-5ad0-477d-a27b-32ba03dafb9a")) (instances (project "OpenFC" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/f2b07475-b96c-42d9-ab92-1eb92706f969" (reference "#PWR0299") (unit 1))))))

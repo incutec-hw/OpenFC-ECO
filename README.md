@@ -1,0 +1,91 @@
+# OpenFC-ECO
+
+Stripped-down variant of [OpenFC](https://github.com/yourusername/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
+
+## What's Different from OpenFC
+
+| Feature | OpenFC | OpenFC-ECO |
+|---------|--------|------------|
+| MCU | RP2354B | RP2354B |
+| IMU | LSM6DSV16XTR | LSM6DSV16XTR |
+| Barometer | BMP388 | **Removed** |
+| Blackbox Flash | BY25Q128ASWIG (16MB) | **Removed** |
+| ELRS Receiver | ESP32-C3FH4 + SX1281 (break-off) | **Removed** |
+| Onboard WS2812B LEDs | 16x (4 corners) | **Removed** |
+| OSD | PIO-based analog | PIO-based analog |
+| Power | 2S-6S, 12V/5V | 2S-6S, 12V/5V |
+
+## Features
+
+### Microcontroller
+- **RP2354B** - Raspberry Pi dual-core ARM Cortex-M33 @ 150MHz (with integrated flash)
+
+### Sensors
+- **IMU**: LSM6DSV16XTR
+
+### Motor Outputs
+- 4x PWM/DShot motor outputs
+
+### Analog OSD on PIO
+Hardware implementation of opamp and mux to detect syncs and select between white and black pixels.
+
+### Connectivity
+- **USB-C** - Configuration and firmware flashing
+- **UART0** - Serial RX/TX
+- **UART1** - Serial port (for external receiver)
+- **PIO UART** - Software UART via RP2350 PIO (2x)
+- **I2C** - External sensor expansion
+- **SPI** - IMU bus
+
+### Analog Inputs
+- Current sensor input (ADC)
+- RSSI input (ADC)
+- 1 external available ADC input
+
+### Additional Features
+- Addressable LED strip output (WS2812/NeoPixel)
+- Buzzer output
+- Status LED
+
+### Power
+- 2S-6S batteries
+- 12V and 5V regulated outputs, 12V is switchable
+
+## Repository Structure
+
+```
+OpenFC-ECO/
+├── README.md
+├── .gitignore
+├── hardware/          ← KiCad project, libraries, and production files
+│   ├── OpenFC.kicad_pro
+│   ├── *.kicad_sch    ← Hierarchical schematics
+│   ├── OpenFC.kicad_pcb
+│   ├── lib.kicad_sym  ← Custom symbol library
+│   ├── lib.pretty/    ← Custom footprint library
+│   ├── lib.3dshapes/  ← 3D models
+│   ├── production/    ← Gerbers, BOM, positions
+│   └── tools/         ← Scripts
+└── images/            ← Board renders
+```
+
+## Schematic Hierarchy
+
+- `OpenFC.kicad_sch` - Top-level schematic
+- `rp2350a.kicad_sch` - RP2354B microcontroller and supporting circuitry
+- `power.kicad_sch` - Power supply and regulation
+- `imu.kicad_sch` - LSM6DSV16XTR IMU
+- `osd.kicad_sch` - OSD circuitry
+- `pads.kicad_sch` - Solder pads and test points
+
+## Design Files
+
+This project uses **KiCad 9.0** for schematic and PCB design. All symbol, footprint, and 3D model libraries are included in the repository — no external library setup is required.
+
+## License
+
+This project is licensed under the **CERN Open Hardware Licence Version 2 - Strongly Reciprocal** ([CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt)). See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
