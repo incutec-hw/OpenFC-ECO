@@ -1,6 +1,6 @@
 # OpenFC-ECO
 
-Stripped-down variant of [OpenFC](https://github.com/yourusername/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
+Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
 
 ## What's Different from OpenFC
 
@@ -56,7 +56,6 @@ Hardware implementation of opamp and mux to detect syncs and select between whit
 ```
 OpenFC-ECO/
 ├── README.md
-├── .gitignore
 ├── hardware/          ← KiCad project, libraries, and production files
 │   ├── OpenFC.kicad_pro
 │   ├── *.kicad_sch    ← Hierarchical schematics
@@ -64,10 +63,10 @@ OpenFC-ECO/
 │   ├── lib.kicad_sym  ← Custom symbol library
 │   ├── lib.pretty/    ← Custom footprint library
 │   ├── lib.3dshapes/  ← 3D models
-│   ├── production/    ← Gerbers, BOM, positions
 │   └── tools/         ← Scripts
-└── images/            ← Board renders
 ```
+
+All symbol, footprint, and 3D model libraries are included in the repository — no external library setup required.
 
 ## Schematic Hierarchy
 
@@ -78,14 +77,6 @@ OpenFC-ECO/
 - `osd.kicad_sch` - OSD circuitry
 - `pads.kicad_sch` - Solder pads and test points
 
-## Design Files
-
-This project uses **KiCad 9.0** for schematic and PCB design. All symbol, footprint, and 3D model libraries are included in the repository — no external library setup is required.
-
 ## License
 
-This project is licensed under the **CERN Open Hardware Licence Version 2 - Strongly Reciprocal** ([CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt)). See [LICENSE](LICENSE) for details.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
+Licensed under [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt). See [LICENSE](LICENSE) for details.

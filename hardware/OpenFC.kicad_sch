@@ -1,22 +1,10 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "fb88b6f9-ee39-4640-a9d4-04a17ceeac64")
 	(paper "A4")
 	(lib_symbols)
-	(junction
-		(at 93.98 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9a889f24-ff78-4c46-8466-e59025aed96b")
-	)
-	(junction
-		(at 91.44 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e1e8ee1d-c77c-497a-99f2-4179d0546522")
-	)
 	(wire
 		(pts
 			(xy 165.1 92.71) (xy 179.07 92.71)
@@ -59,26 +47,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 128.27) (xy 91.44 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "109c57cf-11b0-42de-9db3-5269229c773d")
-	)
-	(wire
-		(pts
-			(xy 86.36 115.57) (xy 91.44 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12e8a7f5-b890-42bd-9c85-64fbc1682993")
-	)
-	(wire
-		(pts
 			(xy 161.29 36.83) (xy 191.77 36.83)
 		)
 		(stroke
@@ -109,26 +77,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 127) (xy 179.07 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "42250d1f-5a50-4ce9-8d51-f7f3f275bbd7")
-	)
-	(wire
-		(pts
-			(xy 91.44 115.57) (xy 102.87 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "42e8ceae-d9af-4a5e-82f0-1b68241c7e22")
-	)
-	(wire
-		(pts
 			(xy 165.1 59.69) (xy 179.07 59.69)
 		)
 		(stroke
@@ -139,13 +87,13 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 118.11) (xy 102.87 118.11)
+			(xy 86.36 115.57) (xy 102.87 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f5a099d-e099-4859-8cec-822ad78599f1")
+		(uuid "51554c81-7217-4233-8c39-d12e53b721bd")
 	)
 	(wire
 		(pts
@@ -199,16 +147,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 58.42) (xy 102.87 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7466febf-ce8f-4d9f-93d7-1dd7a1c452e9")
-	)
-	(wire
-		(pts
 			(xy 165.1 110.49) (xy 179.07 110.49)
 		)
 		(stroke
@@ -246,16 +184,6 @@
 			(type default)
 		)
 		(uuid "85855a38-2da2-43e3-a6c7-1d72a38c8bf6")
-	)
-	(wire
-		(pts
-			(xy 86.36 60.96) (xy 102.87 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87e0608f-2169-4246-9c2c-f973d448cad7")
 	)
 	(wire
 		(pts
@@ -339,16 +267,6 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 115.57) (xy 91.44 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba213643-5a4a-4142-a2ff-497fcf45fe89")
-	)
-	(wire
-		(pts
 			(xy 218.44 91.44) (xy 223.52 91.44)
 		)
 		(stroke
@@ -399,16 +317,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 118.11) (xy 93.98 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ded8b1ed-6d38-4416-a623-44950768b65f")
-	)
-	(wire
-		(pts
 			(xy 196.85 31.75) (xy 161.29 31.75)
 		)
 		(stroke
@@ -429,16 +337,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 130.81) (xy 93.98 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e404ca4d-f1b6-4e9f-94ee-1e3381ea2841")
-	)
-	(wire
-		(pts
 			(xy 165.1 90.17) (xy 179.07 90.17)
 		)
 		(stroke
@@ -449,16 +347,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 118.11) (xy 93.98 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7f57d7b-47cc-4ca3-af68-351c8519d2c8")
-	)
-	(wire
-		(pts
 			(xy 218.44 93.98) (xy 223.52 93.98)
 		)
 		(stroke
@@ -466,6 +354,16 @@
 			(type default)
 		)
 		(uuid "e8e3a785-8159-49d0-9e4a-76e5a53ec22e")
+	)
+	(wire
+		(pts
+			(xy 86.36 118.11) (xy 102.87 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5cc23ac-8a1d-49e5-8dda-5b53e91e2bcf")
 	)
 	(wire
 		(pts
@@ -487,18 +385,8 @@
 		)
 		(uuid "0e71d75b-748d-48bb-938f-9a9f68bbebcd")
 	)
-	(label "LED"
-		(at 218.44 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0ff6fd3d-2fbc-48f4-865d-20f3a933afb1")
-	)
 	(label "I2C_SCL"
-		(at 92.71 115.57 0)
+		(at 86.36 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -506,6 +394,16 @@
 			(justify left bottom)
 		)
 		(uuid "12264164-5cf7-4d03-ab6e-e3ae84365bc5")
+	)
+	(label "LED"
+		(at 165.1 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "246e38f2-e94e-4366-8d30-793390bff987")
 	)
 	(label "UART1_RX"
 		(at 223.52 110.49 0)
@@ -516,16 +414,6 @@
 			(justify left bottom)
 		)
 		(uuid "25e1f753-3bdc-45a1-925e-756956196c86")
-	)
-	(label "LED"
-		(at 179.07 137.16 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "35efb0e2-1637-47b1-ba3a-f8931b0b00d4")
 	)
 	(label "I2C_SCL"
 		(at 223.52 91.44 0)
@@ -568,26 +456,6 @@
 		(uuid "b4d19b0d-83b1-48df-86c5-561980a37f2c")
 	)
 	(label "LED"
-		(at 170.18 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e3036286-2b33-4d7c-ad8f-eb97a920bfe4")
-	)
-	(label "LED"
-		(at 218.44 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e95169ea-be95-4f4d-a770-d974d59a1af6")
-	)
-	(label "LED"
 		(at 223.52 105.41 0)
 		(effects
 			(font
@@ -598,7 +466,7 @@
 		(uuid "ed99d7ec-8654-4abe-bd20-8bf10b26f59a")
 	)
 	(label "I2C_SDA"
-		(at 92.71 118.11 0)
+		(at 86.36 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -606,110 +474,6 @@
 			(justify left bottom)
 		)
 		(uuid "f590bb4b-b829-4d13-b033-c5062a76592e")
-	)
-	(sheet
-		(at 179.07 134.62)
-		(size 13.97 5.08)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "07eb9b62-5f3c-4c50-980e-7ccad2ad777d")
-		(property "Sheetname" "LED's1"
-			(at 179.07 133.9084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "leds.kicad_sch"
-			(at 179.07 140.2846 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "LED_STRIP" input
-			(at 179.07 137.16 180)
-			(uuid "b7ee05df-8609-49a0-b51c-3efbc85b84a4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "12")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 179.07 124.46)
-		(size 13.97 5.08)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "47e36ffd-e602-4c69-8d50-b5d1844ea5c3")
-		(property "Sheetname" "LED's"
-			(at 179.07 123.7484 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "leds.kicad_sch"
-			(at 179.07 130.1246 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "LED_STRIP" input
-			(at 179.07 127 180)
-			(uuid "0cd37315-ecbd-4c47-917c-56f7f661a271")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "10")
-				)
-			)
-		)
 	)
 	(sheet
 		(at 63.5 77.47)
@@ -724,11 +488,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "4c4f8c63-c695-4758-b1bc-c8af53273c68")
 		(property "Sheetname" "BLACKBOX"
 			(at 63.5 76.7584 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -738,6 +504,8 @@
 		)
 		(property "Sheetfile" "blackbox.kicad_sch"
 			(at 63.5 85.6746 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -786,11 +554,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "757ed1e6-9a5f-4a0e-a946-254eae8dfb0d")
 		(property "Sheetname" "IMU"
 			(at 63.5 91.9984 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -800,6 +570,8 @@
 		)
 		(property "Sheetfile" "imu.kicad_sch"
 			(at 63.5 103.4546 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -827,9 +599,9 @@
 				(justify right)
 			)
 		)
-		(pin "SPI0{SCK,MOSI,MISO}" input
+		(pin "SPI0{SCK,MOSI,MISO,CLKIN}" input
 			(at 86.36 100.33 0)
-			(uuid "2f9872e5-dbdc-40f2-b3b9-833eeb89fef0")
+			(uuid "e70ce085-d737-4056-8bdc-1f411974b977")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -846,202 +618,6 @@
 		)
 	)
 	(sheet
-		(at 63.5 54.61)
-		(size 22.86 15.24)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "99f37a8a-e0ce-4199-a70f-608089c0dd22")
-		(property "Sheetname" "ELRS"
-			(at 63.5 53.8984 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "elrs.kicad_sch"
-			(at 63.5 70.4346 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "ELRS_RX" input
-			(at 86.36 64.77 0)
-			(uuid "b33e952a-d4ff-4ff2-adcf-37da12beb6a0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ELRX_TX" input
-			(at 86.36 67.31 0)
-			(uuid "8212b6c0-04aa-4cda-a8dd-1241c737686a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ESP8285_EN" input
-			(at 86.36 60.96 0)
-			(uuid "904ca2d0-0fb7-417e-8215-6d0ca837acd9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "ESP_BOOT0" input
-			(at 86.36 58.42 0)
-			(uuid "d1260e9b-f1f4-495a-ac53-cfae09b25713")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 63.5 125.73)
-		(size 22.86 7.62)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "a075ed74-3bcc-47df-aa10-c56f48bd2f3e")
-		(property "Sheetname" "BAROMETER"
-			(at 63.5 125.0184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "baro.kicad_sch"
-			(at 63.5 133.9346 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "I2C_SCL" input
-			(at 86.36 128.27 0)
-			(uuid "b6238d72-676a-4aea-a3f3-8ed95517b63b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "I2C_SDA" input
-			(at 86.36 130.81 0)
-			(uuid "2ae3bf35-20f8-4ecd-8afc-23541bfd357c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "8")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 204.47 134.62)
-		(size 13.97 5.08)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "ac0dc811-0336-4f21-adb6-e2e2130918c8")
-		(property "Sheetname" "LED's3"
-			(at 204.47 133.9084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "leds.kicad_sch"
-			(at 204.47 140.2846 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "LED_STRIP" input
-			(at 218.44 137.16 0)
-			(uuid "f540c05a-be24-4c07-8c1b-fe46aa219374")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "14")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 125.73 26.67)
 		(size 35.56 20.32)
 		(exclude_from_sim no)
@@ -1053,11 +629,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "cd9508c6-33b2-4092-8e87-ecfbafcee27b")
 		(property "Sheetname" "OSD"
 			(at 125.73 25.9584 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1067,6 +645,8 @@
 		)
 		(property "Sheetfile" "osd.kicad_sch"
 			(at 139.446 23.114 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1145,21 +725,25 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "cec45a0d-1d48-4800-9760-14c521e5fc8b")
 		(property "Sheetname" "RP2350A"
 			(at 102.87 50.0884 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left bottom)
-				(hide yes)
 			)
 		)
 		(property "Sheetfile" "rp2350a.kicad_sch"
 			(at 102.87 163.1446 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1347,16 +931,6 @@
 				(justify right)
 			)
 		)
-		(pin "SPI0{SCK,MOSI,MISO}" bidirectional
-			(at 102.87 100.33 180)
-			(uuid "52d70e24-3738-46f8-b12d-0ac7d080e90f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "SPI1{SCK,MOSI,MISO}" bidirectional
 			(at 102.87 82.55 180)
 			(uuid "8bd1ee90-a7f7-478a-b785-fc395a7ee414")
@@ -1477,6 +1051,16 @@
 				(justify right)
 			)
 		)
+		(pin "SPI0{SCK,MOSI,MISO,CLKIN}" bidirectional
+			(at 102.87 100.33 180)
+			(uuid "74aaee02-b2d1-47fc-ab4b-1ae4e19e5a4f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
@@ -1498,11 +1082,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "e8ddc219-4a16-40b0-9f20-756a7d038611")
 		(property "Sheetname" "PADS"
 			(at 179.07 51.3584 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1512,6 +1098,8 @@
 		)
 		(property "Sheetfile" "pads.kicad_sch"
 			(at 179.07 118.6946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1748,68 +1336,6 @@
 		)
 	)
 	(sheet
-		(at 63.5 113.03)
-		(size 22.86 7.62)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "f2b07475-b96c-42d9-ab92-1eb92706f969")
-		(property "Sheetname" "COMPASS"
-			(at 63.5 112.3184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "compass.kicad_sch"
-			(at 63.5 121.2346 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "I2C_SCL" input
-			(at 86.36 115.57 0)
-			(uuid "2d532b9d-d9db-4217-9f31-ef54d6c84d5f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "I2C_SDA" input
-			(at 86.36 118.11 0)
-			(uuid "fe32317f-309d-499c-91c9-df05d12a79cf")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "9")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 31.75 30.48)
 		(size 26.67 132.08)
 		(exclude_from_sim no)
@@ -1822,11 +1348,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "f8522f96-c979-41d2-ae00-e5ad899a3161")
 		(property "Sheetname" "POWER"
 			(at 31.75 29.7684 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1836,6 +1364,8 @@
 		)
 		(property "Sheetfile" "power.kicad_sch"
 			(at 31.75 163.1446 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1857,58 +1387,6 @@
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 204.47 124.46)
-		(size 13.97 5.08)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "fa1d47d0-693b-4eff-ba9c-93cac71e6315")
-		(property "Sheetname" "LED's2"
-			(at 204.47 123.7484 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "leds.kicad_sch"
-			(at 204.47 130.1246 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "LED_STRIP" input
-			(at 218.44 127 0)
-			(uuid "fe2d5364-bb1f-4e7f-8bab-25991b438715")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "13")
 				)
 			)
 		)

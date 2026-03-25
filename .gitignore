@@ -1,52 +1,57 @@
-# KiCad backup files
-*.bak
+# macOS
+.DS_Store
+
+# KiCad backup and autosave
 *-backups/
+*.bak
+*.000
 _autosave-*
 *~
-~*.lck
-
-# KiCad lock files
-*.lck
-
-# KiCad local settings
-*.kicad_prl
-fp-info-cache
-
-# KiCad autosave
 \#auto_saved_files#
 
-# Generated JSON (extraction scripts output)
-extracted_*.json
-ext2_*.json
-netlist_*.json
+# KiCad generated/local
+*.kicad_prl
+*.kicad_dru
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+*.net
+*.rpt
+*.tmp
+fp-info-cache
+replicate_layout.log
+
+# KiCad local history
+**/.history/
+
+# 3D exports (not library files)
+**/.step
+**/*.glb
+
+# Production output (generated, re-exportable)
+**/production/
+
+# Fabrication toolkit config
+fabrication-toolkit-options.json
 
 # Python
 __pycache__/
 *.pyc
 
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
+# Claude
+.claude/
+CLAUDE.md
 
-# Temporary files
-*.tmp
-*.temp
-
-# Stencil output
-stencil_out/
-
-# Production backups (keep main production files, not backups)
-hardware/production/backups/
-
-# Generated exports (paste stencils, BOM)
+# Generated exports
 hardware/bom/
 hardware/*_Paste.dxf
 hardware/*_Paste.svg
+stencil_out/
 
-# Downloaded datasheets (regenerable)
+# Script output
+extracted_*.json
+ext2_*.json
+netlist_*.json
+
+# Datasheets (downloadable)
 datasheets/
-
-# Claude local settings
-.claude/
