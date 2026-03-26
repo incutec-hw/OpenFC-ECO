@@ -46,12 +46,14 @@ CLAUDE.md
 hardware/bom/
 hardware/*_Paste.dxf
 hardware/*_Paste.svg
+hardware/*.kicad_pcb.zip
 stencil_out/
 
 # Script output
 extracted_*.json
 ext2_*.json
 netlist_*.json
+hardware/tools/.lcsc_mpn_cache.json
 
 # Datasheets (downloadable)
 datasheets/

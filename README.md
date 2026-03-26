@@ -2,6 +2,13 @@
 
 Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
 
+<!-- Add board renders here when available:
+<p>
+<img src="images/OpenFC-ECO_Front.png" width="400" alt="OpenFC-ECO Front" />
+<img src="images/OpenFC-ECO_Back.png" width="400" alt="OpenFC-ECO Back" />
+</p>
+-->
+
 ## What's Different from OpenFC
 
 | Feature | OpenFC | OpenFC-ECO |
@@ -63,7 +70,8 @@ OpenFC-ECO/
 │   ├── lib.kicad_sym  ← Custom symbol library
 │   ├── lib.pretty/    ← Custom footprint library
 │   ├── lib.3dshapes/  ← 3D models
-│   └── tools/         ← Scripts
+│   └── tools/         ← Analysis scripts
+└── images/            ← Board renders
 ```
 
 All symbol, footprint, and 3D model libraries are included in the repository — no external library setup required.
