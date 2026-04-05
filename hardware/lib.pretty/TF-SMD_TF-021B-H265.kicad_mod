@@ -31,7 +31,7 @@
 	(fp_circle (center -5.68 -2.40) (end -5.65 -2.40) (layer F.Fab) (width 0.06))
 	(fp_circle (center 3.81 -1.52) (end 3.94 -1.52) (layer Cmts.User) (width 0.25))
 	(fp_circle (center 4.19 -2.79) (end 4.47 -2.79) (layer F.SilkS) (width 0.25))
-	(model "/lib.3dshapes/TF-SMD_TF-021B-H265.wrl"
+	(model "hardware/lib.3dshapes/TF-SMD_TF-021B-H265.wrl"
 		(offset (xyz 0.250 -0.350 -0.000))
 		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 0))
