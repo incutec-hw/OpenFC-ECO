@@ -2080,7 +2080,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00113402-1f02-4032-bf21-1c619fc8b4b3")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR0142"
 			(at 182.88 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -2140,7 +2140,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0103")
+					(reference "#PWR0142")
 					(unit 1)
 				)
 			)
@@ -2158,7 +2158,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "014cc777-5291-4672-abe9-78011b826f82")
-		(property "Reference" "#PWR096"
+		(property "Reference" "#PWR0150"
 			(at 218.44 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2218,7 +2218,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR096")
+					(reference "#PWR0150")
 					(unit 1)
 				)
 			)
@@ -2235,7 +2235,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a1d3f89-5481-4677-93fb-15d76c6a7865")
-		(property "Reference" "C64"
+		(property "Reference" "C38"
 			(at 140.716 114.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2331,7 +2331,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "C64")
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -2349,7 +2349,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19015390-7522-41da-8a7b-27ae32090efe")
-		(property "Reference" "U34"
+		(property "Reference" "U20"
 			(at 224.79 100.2598 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2453,7 +2453,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "U34")
+					(reference "U20")
 					(unit 1)
 				)
 			)
@@ -2471,7 +2471,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2807c3d9-0a59-4e27-bb47-cd2a68bab6e2")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR0144"
 			(at 191.77 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -2531,7 +2531,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0102")
+					(reference "#PWR0144")
 					(unit 1)
 				)
 			)
@@ -2549,7 +2549,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a64fec7-dd9b-4020-abac-67f97f3a54c0")
-		(property "Reference" "#PWR0104"
+		(property "Reference" "#PWR0136"
 			(at 142.24 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -2609,7 +2609,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0104")
+					(reference "#PWR0136")
 					(unit 1)
 				)
 			)
@@ -2626,7 +2626,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f71a543-9c05-45db-b8ad-0784667e883b")
-		(property "Reference" "R30"
+		(property "Reference" "R42"
 			(at 97.79 162.56 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2721,7 +2721,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R30")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -2739,7 +2739,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4dfe6664-9fc0-44ea-be4e-c3ce3af8425e")
-		(property "Reference" "#PWR097"
+		(property "Reference" "#PWR0148"
 			(at 210.82 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -2799,7 +2799,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR097")
+					(reference "#PWR0148")
 					(unit 1)
 				)
 			)
@@ -2817,7 +2817,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53e4938c-66d0-4155-920f-19b9f90d9fc4")
-		(property "Reference" "#PWR0197"
+		(property "Reference" "#PWR0139"
 			(at 149.86 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -2877,7 +2877,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0197")
+					(reference "#PWR0139")
 					(unit 1)
 				)
 			)
@@ -2894,7 +2894,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "570251c2-2265-411c-851c-52fd69b4452c")
-		(property "Reference" "U38"
+		(property "Reference" "U19"
 			(at 200.66 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2998,7 +2998,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "U38")
+					(reference "U19")
 					(unit 1)
 				)
 			)
@@ -3016,7 +3016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5922b446-08cf-4a29-a519-70e52e5521e8")
-		(property "Reference" "#PWR093"
+		(property "Reference" "#PWR0134"
 			(at 109.22 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -3076,7 +3076,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR093")
+					(reference "#PWR0134")
 					(unit 1)
 				)
 			)
@@ -3094,7 +3094,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5deb7413-5725-4e25-9f2b-8bf8be9f3f38")
-		(property "Reference" "#PWR095"
+		(property "Reference" "#PWR0149"
 			(at 218.44 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -3154,7 +3154,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR095")
+					(reference "#PWR0149")
 					(unit 1)
 				)
 			)
@@ -3172,7 +3172,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68b5655d-9ea2-4846-b207-9a05a2da5aa4")
-		(property "Reference" "R48"
+		(property "Reference" "R46"
 			(at 180.34 185.4199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3269,7 +3269,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R48")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -3287,7 +3287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6d5fac57-5205-4d43-a81b-756fbd5fe66b")
-		(property "Reference" "#PWR094"
+		(property "Reference" "#PWR0140"
 			(at 168.91 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -3347,7 +3347,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR094")
+					(reference "#PWR0140")
 					(unit 1)
 				)
 			)
@@ -3365,7 +3365,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "798346d6-fc57-4f8c-bfa8-d11362de1f95")
-		(property "Reference" "#PWR0106"
+		(property "Reference" "#PWR0143"
 			(at 182.88 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -3425,7 +3425,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0106")
+					(reference "#PWR0143")
 					(unit 1)
 				)
 			)
@@ -3442,7 +3442,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7e772e60-0977-4235-942b-17bc9901b8c1")
-		(property "Reference" "U35"
+		(property "Reference" "U18"
 			(at 163.83 155.702 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3549,7 +3549,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "U35")
+					(reference "U18")
 					(unit 1)
 				)
 			)
@@ -3566,7 +3566,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "87bc5b4a-6f74-4e3c-9a3e-f6d97ddea3d6")
-		(property "Reference" "R46"
+		(property "Reference" "R43"
 			(at 105.41 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3661,7 +3661,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R46")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -3678,7 +3678,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88c5bfe0-3fb3-466b-b9c2-9e826a0ce6db")
-		(property "Reference" "C69"
+		(property "Reference" "C41"
 			(at 182.88 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3774,7 +3774,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "C69")
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -3792,7 +3792,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8a4d3b1b-caef-48fd-9fed-e1582f4c7c12")
-		(property "Reference" "R47"
+		(property "Reference" "R48"
 			(at 210.82 158.75 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3887,7 +3887,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R47")
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -3904,7 +3904,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "97e7b536-641e-4b26-b48d-29aa9b6965c7")
-		(property "Reference" "C49"
+		(property "Reference" "C39"
 			(at 142.24 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4000,7 +4000,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "C49")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -4017,7 +4017,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9adf871d-d8c3-4d00-86af-c34851614c57")
-		(property "Reference" "R45"
+		(property "Reference" "R44"
 			(at 105.41 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4112,7 +4112,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R45")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -4130,7 +4130,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a7835f57-10f3-4fd5-a164-0c8156271a58")
-		(property "Reference" "R21"
+		(property "Reference" "R41"
 			(at 100.33 114.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4227,7 +4227,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R21")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -4245,7 +4245,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae07c90e-bc68-4744-8e74-f7d3c53342b3")
-		(property "Reference" "#PWR099"
+		(property "Reference" "#PWR0146"
 			(at 194.31 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -4306,7 +4306,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR099")
+					(reference "#PWR0146")
 					(unit 1)
 				)
 			)
@@ -4324,7 +4324,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b89e3006-75aa-45ee-8613-01949c74e0b6")
-		(property "Reference" "#PWR098"
+		(property "Reference" "#PWR0147"
 			(at 210.82 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4384,7 +4384,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR098")
+					(reference "#PWR0147")
 					(unit 1)
 				)
 			)
@@ -4402,7 +4402,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b995bd4a-876f-409f-8c09-a873063938a4")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR0133"
 			(at 109.22 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -4462,7 +4462,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR092")
+					(reference "#PWR0133")
 					(unit 1)
 				)
 			)
@@ -4479,7 +4479,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ba7023df-40b2-4da2-947f-292f8dcfa252")
-		(property "Reference" "C66"
+		(property "Reference" "C40"
 			(at 157.861 102.489 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4575,7 +4575,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "C66")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -4593,7 +4593,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "befa5402-3ef6-4e85-976d-2ed135f4ee29")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR0132"
 			(at 97.79 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -4653,7 +4653,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR045")
+					(reference "#PWR0132")
 					(unit 1)
 				)
 			)
@@ -4671,7 +4671,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c695fb56-7fbe-4728-8d67-17c864be4f7d")
-		(property "Reference" "#PWR0107"
+		(property "Reference" "#PWR0141"
 			(at 177.8 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -4731,7 +4731,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0107")
+					(reference "#PWR0141")
 					(unit 1)
 				)
 			)
@@ -4748,7 +4748,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c725f27a-8e38-46dd-8fd7-31433c6dd863")
-		(property "Reference" "C3"
+		(property "Reference" "C42"
 			(at 218.44 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4844,7 +4844,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "C3")
+					(reference "C42")
 					(unit 1)
 				)
 			)
@@ -4862,7 +4862,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf2ff18a-5f37-4f5d-82a2-7765121fdf8c")
-		(property "Reference" "R27"
+		(property "Reference" "R45"
 			(at 129.54 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4957,7 +4957,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R27")
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -4975,7 +4975,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5b05da6-5cf1-42c9-bf9b-3b38c71e7e1e")
-		(property "Reference" "#PWR0100"
+		(property "Reference" "#PWR0145"
 			(at 191.77 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5035,7 +5035,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0100")
+					(reference "#PWR0145")
 					(unit 1)
 				)
 			)
@@ -5053,7 +5053,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d8bd5918-93f3-471c-866c-e9afd1b898be")
-		(property "Reference" "#PWR0129"
+		(property "Reference" "#PWR0137"
 			(at 142.24 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -5113,7 +5113,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0129")
+					(reference "#PWR0137")
 					(unit 1)
 				)
 			)
@@ -5245,7 +5245,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "da61f401-afd4-4166-b1c3-35ef103bfd9e")
-		(property "Reference" "#PWR083"
+		(property "Reference" "#PWR0135"
 			(at 137.16 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -5305,7 +5305,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR083")
+					(reference "#PWR0135")
 					(unit 1)
 				)
 			)
@@ -5323,7 +5323,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e81e637a-c233-46b2-89f5-474c5a5db9f1")
-		(property "Reference" "#PWR0168"
+		(property "Reference" "#PWR0138"
 			(at 149.86 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -5383,7 +5383,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "#PWR0168")
+					(reference "#PWR0138")
 					(unit 1)
 				)
 			)
@@ -5401,7 +5401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f99f7cfd-a5ee-4b31-a2a4-ac08e5ceb711")
-		(property "Reference" "R49"
+		(property "Reference" "R47"
 			(at 199.39 173.99 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5496,7 +5496,7 @@
 		(instances
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cd9508c6-33b2-4092-8e87-ecfbafcee27b"
-					(reference "R49")
+					(reference "R47")
 					(unit 1)
 				)
 			)
