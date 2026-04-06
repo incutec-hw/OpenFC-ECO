@@ -244,7 +244,7 @@
 		(uuid "7397cfed-0f53-4e2f-9864-be0d625eefdd")
 	)
 	(embedded_fonts no)
-	(model "hardware/lib.3dshapes/TF-SMD_TF-021B-H265.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/TF-SMD_TF-021B-H265.wrl"
 		(offset
 			(xyz 0.25 -0.35 -0)
 		)

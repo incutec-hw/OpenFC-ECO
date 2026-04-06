@@ -4857,6 +4857,12 @@
 		(uuid "58aa4ebd-4b24-4163-9972-cec7d86e0c8c")
 	)
 	(junction
+		(at 280.67 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60692674-72a4-46b4-8b96-3f9de817f977")
+	)
+	(junction
 		(at 361.95 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4987,10 +4993,6 @@
 		(uuid "0b785670-63b4-44d1-9292-9806d35ddb2e")
 	)
 	(no_connect
-		(at 199.39 217.17)
-		(uuid "1104d038-641f-4920-949f-0919f326a9e4")
-	)
-	(no_connect
 		(at 255.27 212.09)
 		(uuid "143f9450-aa69-4c94-bae4-aa1f519c54b6")
 	)
@@ -5047,10 +5049,6 @@
 		(uuid "b6dd6610-8d58-4455-8b64-d9eb60e4aec9")
 	)
 	(no_connect
-		(at 199.39 201.93)
-		(uuid "bc78dfe2-2d76-49ee-ba04-17cf63922349")
-	)
-	(no_connect
 		(at 199.39 212.09)
 		(uuid "c0c9c01e-e20a-4cba-b0fc-be4daaab6b4c")
 	)
@@ -5061,10 +5059,6 @@
 	(no_connect
 		(at 255.27 217.17)
 		(uuid "f061dbf0-cc0e-49ac-9260-997a915758fb")
-	)
-	(no_connect
-		(at 199.39 219.71)
-		(uuid "fa0b5e1d-6228-4a82-b6fb-b9d1c0df8d57")
 	)
 	(no_connect
 		(at 199.39 156.21)
@@ -5165,7 +5159,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 120.65) (xy 290.83 120.65)
+			(xy 255.27 120.65) (xy 280.67 120.65)
 		)
 		(stroke
 			(width 0)
@@ -5202,16 +5196,6 @@
 			(type default)
 		)
 		(uuid "09db418f-5f02-4003-b391-8c23122b2d0e")
-	)
-	(wire
-		(pts
-			(xy 255.27 209.55) (xy 274.32 209.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0cd37ed1-0574-44f4-9873-ea3445c55b50")
 	)
 	(wire
 		(pts
@@ -5625,16 +5609,6 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 214.63) (xy 274.32 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48e933f3-48e6-4676-947f-39604afcc6ed")
-	)
-	(wire
-		(pts
 			(xy 363.22 180.34) (xy 363.22 181.61)
 		)
 		(stroke
@@ -5825,16 +5799,6 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 207.01) (xy 274.32 207.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66ba3146-48f5-428a-b40c-213da152cd3e")
-	)
-	(wire
-		(pts
 			(xy 269.24 71.12) (xy 269.24 74.93)
 		)
 		(stroke
@@ -5882,6 +5846,16 @@
 			(type default)
 		)
 		(uuid "72ae7678-c94b-454b-8c06-b3ca10e62b3d")
+	)
+	(wire
+		(pts
+			(xy 280.67 120.65) (xy 290.83 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73c61d26-c440-4e49-8724-ba08f2b9b7b2")
 	)
 	(wire
 		(pts
@@ -6864,12 +6838,12 @@
 		(uuid "177d81fb-bc33-43f9-95c4-e94d67f29dc4")
 	)
 	(label "BEEPER"
-		(at 255.27 198.12 0)
+		(at 199.39 201.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "2cfa45bf-c3cf-40cf-9e8d-a5897adba5b0")
 	)
@@ -7153,17 +7127,6 @@
 		)
 		(uuid "fd39124d-7e82-49c1-959b-c015f484bb68")
 	)
-	(hierarchical_label "OSD_SYNC"
-		(shape input)
-		(at 274.32 214.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "06eae2f0-1b00-4327-8ecd-c2b5f32727a8")
-	)
 	(hierarchical_label "I2C_SCL"
 		(shape bidirectional)
 		(at 314.96 144.78 0)
@@ -7185,17 +7148,6 @@
 			(justify left)
 		)
 		(uuid "1aecb989-eae8-4f4d-956b-ddb1c8ee0b6a")
-	)
-	(hierarchical_label "OSD_W"
-		(shape output)
-		(at 274.32 207.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1b4d26e6-1033-41f4-8b72-dfa0781d722f")
 	)
 	(hierarchical_label "EXTERNAL"
 		(shape input)
@@ -7240,6 +7192,17 @@
 			(justify left)
 		)
 		(uuid "4e4fe6b5-c09f-4025-8ee8-a5d678b82aab")
+	)
+	(hierarchical_label "OSD_W"
+		(shape output)
+		(at 199.39 217.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "51a03de8-52bc-409c-b513-0c1488448baf")
 	)
 	(hierarchical_label "SPI1{SCK,MOSI,MISO}"
 		(shape bidirectional)
@@ -7362,17 +7325,6 @@
 		)
 		(uuid "a08f73eb-8ea6-417d-930b-cd7f1660fe8a")
 	)
-	(hierarchical_label "OSD_EN"
-		(shape output)
-		(at 274.32 209.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a2174955-6b54-493c-a645-1b78f3d2e662")
-	)
 	(hierarchical_label "SBUS"
 		(shape input)
 		(at 337.82 115.57 180)
@@ -7439,6 +7391,17 @@
 		)
 		(uuid "bb646c0c-2da7-4d55-9ce8-d1754dc16cdc")
 	)
+	(hierarchical_label "OSD_SYNC"
+		(shape input)
+		(at 255.27 198.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d137a701-fd9d-46ff-9698-0d344d91d902")
+	)
 	(hierarchical_label "PIOUART1_RX"
 		(shape input)
 		(at 255.27 187.96 0)
@@ -7460,6 +7423,17 @@
 			(justify left)
 		)
 		(uuid "e360ec21-3d95-44be-8a26-c85e7d7c4c86")
+	)
+	(hierarchical_label "OSD_EN"
+		(shape output)
+		(at 199.39 219.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ed2370c7-45ce-446e-a3dd-e1ab79425637")
 	)
 	(hierarchical_label "PIOUART0_TX"
 		(shape output)
@@ -7503,7 +7477,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 379.73 221.488 90)
 			(hide yes)
 			(show_name no)
@@ -7693,7 +7667,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 353.568 176.53 90)
 			(hide yes)
 			(show_name no)
@@ -7920,7 +7894,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 191.77 118.618 90)
 			(hide yes)
 			(show_name no)
@@ -8189,7 +8163,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 78.74 206.502 90)
 			(hide yes)
 			(show_name no)
@@ -9387,7 +9361,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 345.44 168.402 90)
 			(hide yes)
 			(show_name no)
@@ -9612,7 +9586,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 344.17 113.792 90)
 			(hide yes)
 			(show_name no)
@@ -9993,7 +9967,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 372.872 215.9 90)
 			(hide yes)
 			(show_name no)
@@ -10251,7 +10225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 78.74 221.742 90)
 			(hide yes)
 			(show_name no)
@@ -10441,7 +10415,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 53.34 112.268 90)
 			(hide yes)
 			(show_name no)
@@ -10553,7 +10527,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 282.448 116.84 90)
 			(hide yes)
 			(show_name no)
@@ -11012,7 +10986,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 352.298 121.92 90)
 			(hide yes)
 			(show_name no)
@@ -11202,7 +11176,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 311.912 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -11314,7 +11288,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 348.742 215.9 90)
 			(hide yes)
 			(show_name no)
@@ -11772,7 +11746,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 53.34 103.378 90)
 			(hide yes)
 			(show_name no)
@@ -12040,7 +12014,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 144.78 88.392 90)
 			(hide yes)
 			(show_name no)
@@ -12231,7 +12205,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 144.78 127.762 90)
 			(hide yes)
 			(show_name no)
@@ -12537,7 +12511,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 267.462 63.5 90)
 			(hide yes)
 			(show_name no)
@@ -13391,7 +13365,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 183.642 63.5 90)
 			(hide yes)
 			(show_name no)
@@ -13663,7 +13637,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 305.562 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -14966,7 +14940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 311.912 156.21 90)
 			(hide yes)
 			(show_name no)
@@ -15784,7 +15758,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 120.65 164.592 90)
 			(hide yes)
 			(show_name no)
@@ -16009,7 +15983,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 185.42 97.028 90)
 			(hide yes)
 			(show_name no)
@@ -16470,7 +16444,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 363.728 105.41 90)
 			(hide yes)
 			(show_name no)
@@ -17470,7 +17444,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 187.96 161.798 90)
 			(hide yes)
 			(show_name no)
@@ -17773,7 +17747,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 191.77 117.602 90)
 			(hide yes)
 			(show_name no)
@@ -18276,7 +18250,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 144.78 108.712 90)
 			(hide yes)
 			(show_name no)

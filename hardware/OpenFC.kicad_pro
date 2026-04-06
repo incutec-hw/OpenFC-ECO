@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.09
+          "min_clearance": 0.12
         }
       },
       "diff_pair_dimensions": [
@@ -161,7 +161,7 @@
       "teardrop_parameters": [
         {
           "td_allow_use_two_tracks": true,
-          "td_curve_segcount": 0,
+          "td_curve_segcount": 1,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -715,7 +715,7 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "C1-43,U1-20,R1-48,P1,X1,USB1,L1-3,Q1-4,#PWR1-155,D1-9,J1-54,Card1",
+    "used_designators": "D10,R40,C30",
     "variants": []
   },
   "sheets": [

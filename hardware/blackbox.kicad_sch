@@ -835,6 +835,12 @@
 		)
 	)
 	(junction
+		(at 135.89 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f2d7ad2-933f-42a4-9e8d-1f9b8c17f341")
+	)
+	(junction
 		(at 115.57 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -923,7 +929,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 71.12) (xy 140.97 71.12)
+			(xy 129.54 71.12) (xy 135.89 71.12)
 		)
 		(stroke
 			(width 0)
@@ -941,6 +947,16 @@
 		)
 		(uuid "613e3c3a-f503-4839-a0f3-e4478c33078c")
 	)
+	(wire
+		(pts
+			(xy 135.89 44.45) (xy 135.89 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64856649-650c-4ab5-9469-ceb079ffa911")
+	)
 	(bus
 		(pts
 			(xy 167.64 74.93) (xy 167.64 77.47)
@@ -950,6 +966,16 @@
 			(type default)
 		)
 		(uuid "66545a2c-a6ed-4385-b4d9-69c4cd957ccd")
+	)
+	(wire
+		(pts
+			(xy 121.92 44.45) (xy 135.89 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6aaeb4e2-d884-4c42-8ad1-287e08572b67")
 	)
 	(wire
 		(pts
@@ -1000,6 +1026,16 @@
 			(type default)
 		)
 		(uuid "f41fd4e4-cdf5-4657-8656-cce0e0b45278")
+	)
+	(wire
+		(pts
+			(xy 135.89 71.12) (xy 140.97 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5809f5d-2486-4c13-90c4-29e990744a56")
 	)
 	(wire
 		(pts
@@ -1095,7 +1131,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 73.66 62.23 90)
+		(at 135.89 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1105,7 +1141,7 @@
 		(dnp no)
 		(uuid "19be7955-58d0-4c8d-a2a1-cb0c14a2c282")
 		(property "Reference" "R39"
-			(at 73.66 57.15 90)
+			(at 140.97 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1115,7 +1151,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 73.66 59.69 90)
+			(at 138.43 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1124,8 +1160,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 73.66 64.008 90)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 134.112 67.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1136,7 +1172,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 62.23 0)
+			(at 135.89 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1147,7 +1183,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 73.66 62.23 0)
+			(at 135.89 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1158,7 +1194,7 @@
 			)
 		)
 		(property "LCSC" "C106225"
-			(at 73.66 62.23 0)
+			(at 135.89 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1169,7 +1205,7 @@
 			)
 		)
 		(property "MPN" "RC0201FR-0710KL"
-			(at -121.92 -33.02 0)
+			(at 231.14 -128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1180,7 +1216,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at -121.92 -33.02 0)
+			(at 231.14 -128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1408,118 +1444,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 73.66 44.45 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "55e337ec-0c94-4843-8e29-936a28f7478c")
-		(property "Reference" "R38"
-			(at 73.66 39.37 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 73.66 41.91 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 73.66 46.228 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 73.66 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C106225"
-			(at 73.66 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at -121.92 -50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at -121.92 -50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "a01f87fb-a953-482b-ab36-697141873bca")
-		)
-		(pin "1"
-			(uuid "647ec05e-66d0-485e-b1d4-315c607f8b12")
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
-					(reference "R38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 121.92 50.8 0)
 		(unit 1)
@@ -1705,119 +1629,6 @@
 			(project "OpenFC"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
 					(reference "#PWR0152")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 78.74 48.26 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9b8e72e1-3fd3-4691-ac13-e66246254f01")
-		(property "Reference" "C37"
-			(at 82.296 48.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100n"
-			(at 82.296 46.228 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 77.7748 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 48.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C76939"
-			(at 78.74 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at -58.42 207.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at -58.42 207.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "601d7aa0-3392-49ed-8f0f-6b970944cf87")
-		)
-		(pin "2"
-			(uuid "30b267db-0185-410a-b100-2ba90808bfb6")
-		)
-		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
-					(reference "C37")
 					(unit 1)
 				)
 			)

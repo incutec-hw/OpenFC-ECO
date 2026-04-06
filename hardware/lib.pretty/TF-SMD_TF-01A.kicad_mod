@@ -268,7 +268,7 @@
 		(uuid "d2dc083a-5011-4c5c-8851-89a7412d6776")
 	)
 	(embedded_fonts no)
-	(model "/lib.3dshapes/TF-SMD_TF-01A.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/TF-SMD_TF-01A.wrl"
 		(offset
 			(xyz 0 -2.18 0.6)
 		)

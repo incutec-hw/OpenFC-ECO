@@ -9,8 +9,8 @@ No baro, no integrated ELRS receiver, no WS2812B onboard LEDs. SD card slot repl
 |----|------|------|-----|
 | MCU | RP2354B (QFN-80, 2MB flash) | C39843328 | — |
 | IMU | LSM6DSV16XTR | C5267406 | SPI0 (GPIO18-20), CS=GPIO14, INT=GPIO13 |
-| 10V Buck (sw) | LMR51420YFDDCR | C7296200 | EN=GPIO11 |
-| 5V Buck (always-on) | LMR51420YFDDCR | C7296200 | — |
+| 10V Buck (sw) | LMR51420YFDDCR (2A) | C7296200 | EN=GPIO11; pin-compat drop-in to 3A: LMR51430YFDDCR (C5219261) |
+| 5V Buck (always-on) | LMR51420YFDDCR (2A) | C7296200 | pin-compat drop-in to 3A: LMR51430YFDDCR (C5219261) |
 | 3.3V LDO | LP5912-3.3DRVR | C524780 | — |
 | 1.8V Gyro LDO | NCV8187AMT180TAG | C893189 | — |
 | 5V Power Mux | TPS2116DRLR | C3235557 | — |

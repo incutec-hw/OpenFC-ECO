@@ -236,7 +236,7 @@
 		(uuid "fe71e0a2-4755-42a2-9959-0995c91982ee")
 	)
 	(embedded_fonts no)
-	(model "/lib.3dshapes/SIM-SMD_8P-1040310811.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/SIM-SMD_8P-1040310811.wrl"
 		(offset
 			(xyz 0 -0.05 -0)
 		)
