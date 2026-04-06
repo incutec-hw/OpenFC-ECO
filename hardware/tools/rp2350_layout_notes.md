@@ -22,7 +22,7 @@ This means the following MUST stay on the top side with the MCU:
 Footprint zone: ~6×4 mm cluster near pins 60-65.
 
 Additional rules for this zone:
-- Cut away copper immediately under L_X / VREG_LX switch node trace on top layer AND inner layer 2 (4-layer boards)
+- Cut away copper immediately under L_X / VREG_LX switch node trace on top layer AND inner layer 2 (6-layer boards)
 - GND vias back to QFN center pad: use **2 adjacent vias** to reduce impedance, "short-as-possible"
 - CFILT GND path MUST NOT share vias with C_IN/C_OUT high-current GND
 - VREG_FB: feed from COUT output, do NOT route under LX

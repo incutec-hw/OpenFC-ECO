@@ -1,7 +1,7 @@
 # OpenFC-ECO — Project Instructions
 
 ## What This Is
-Open-source Betaflight flight controller — **ECO (stripped) variant** of OpenFC. 30x30mm, 4-layer, 3S-6S.
+Open-source Betaflight flight controller — **ECO (stripped) variant** of OpenFC. 30x30mm, 6-layer, 3S-6S.
 No baro, no integrated ELRS receiver, no WS2812B onboard LEDs. SD card slot replaces onboard blackbox flash. Same MCU, IMU, OSD, and power design as the full OpenFC.
 
 ## Key ICs

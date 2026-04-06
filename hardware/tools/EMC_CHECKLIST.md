@@ -78,7 +78,7 @@
 - Series R (100-470 ohm) on LED strip + ESD diode
 - Series R on beeper drive
 
-## 9. GND plane topology (4-layer)
+## 9. GND plane topology (6-layer)
 
 - Solid continuous GND plane on layer 2 under top signals, no splits
 - No separate analog/digital GND islands
