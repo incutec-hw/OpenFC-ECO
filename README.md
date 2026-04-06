@@ -18,7 +18,7 @@ Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-
 | ELRS Receiver | ESP32-C3FH4 + SX1281 (break-off) | **Removed** |
 | Onboard WS2812B LEDs | 16x (4 corners) | **Removed** |
 | OSD | PIO-based analog | PIO-based analog |
-| Power | 3S-6S, 10V/5V | 2S-6S, 10V/5V |
+| Power | 3S-6S, 10V/5V | 3S-6S, 10V/5V |
 
 ## Features
 
@@ -53,7 +53,7 @@ Hardware implementation of opamp and mux to detect syncs and select between whit
 - Status LED
 
 ### Power
-- 2S-6S batteries
+- 3S-6S batteries
 - 10V and 5V regulated outputs, 10V is switchable
 
 ## Repository Structure
