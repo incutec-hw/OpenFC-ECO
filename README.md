@@ -2,12 +2,10 @@
 
 Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
 
-<!-- Add board renders here when available:
 <p>
-<img src="images/OpenFC-ECO_Front.png" width="400" alt="OpenFC-ECO Front" />
-<img src="images/OpenFC-ECO_Back.png" width="400" alt="OpenFC-ECO Back" />
+<img src="images/openfc-eco-v03-top.png" width="400" alt="OpenFC-ECO V0.3 Top" />
+<img src="images/openfc-eco-v03-bottom.png" width="400" alt="OpenFC-ECO V0.3 Bottom" />
 </p>
--->
 
 ## What's Different from OpenFC
 
@@ -16,11 +14,11 @@ Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-
 | MCU | RP2354B | RP2354B |
 | IMU | LSM6DSV16XTR | LSM6DSV16XTR |
 | Barometer | BMP388 | **Removed** |
-| Blackbox Flash | BY25Q128ASWIG (16MB) | **Removed** |
+| Blackbox | BY25Q128ASWIG (16MB SPI flash) | **MicroSD card slot** |
 | ELRS Receiver | ESP32-C3FH4 + SX1281 (break-off) | **Removed** |
 | Onboard WS2812B LEDs | 16x (4 corners) | **Removed** |
 | OSD | PIO-based analog | PIO-based analog |
-| Power | 2S-6S, 12V/5V | 2S-6S, 12V/5V |
+| Power | 2S-6S, 10V/5V | 2S-6S, 10V/5V |
 
 ## Features
 
@@ -56,7 +54,7 @@ Hardware implementation of opamp and mux to detect syncs and select between whit
 
 ### Power
 - 2S-6S batteries
-- 12V and 5V regulated outputs, 12V is switchable
+- 10V and 5V regulated outputs, 10V is switchable
 
 ## Repository Structure
 
@@ -83,7 +81,8 @@ All symbol, footprint, and 3D model libraries are included in the repository —
 - `power.kicad_sch` - Power supply and regulation
 - `imu.kicad_sch` - LSM6DSV16XTR IMU
 - `osd.kicad_sch` - OSD circuitry
-- `pads.kicad_sch` - Solder pads and test points
+- `blackbox.kicad_sch` - MicroSD card slot (blackbox logging)
+- `pads.kicad_sch` - Solder pads and connectors
 
 ## License
 
