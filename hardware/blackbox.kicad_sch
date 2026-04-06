@@ -838,7 +838,7 @@
 		(at 135.89 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3f2d7ad2-933f-42a4-9e8d-1f9b8c17f341")
+		(uuid "411fb940-bd3b-4f09-a46e-1f0032a18e08")
 	)
 	(junction
 		(at 115.57 85.09)
@@ -1029,7 +1029,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 71.12) (xy 140.97 71.12)
+			(xy 135.89 71.12) (xy 143.51 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1120,7 +1120,7 @@
 	)
 	(hierarchical_label "FLASH_CS"
 		(shape input)
-		(at 140.97 71.12 0)
+		(at 143.51 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)

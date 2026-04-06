@@ -513,9 +513,9 @@
 				(justify left top)
 			)
 		)
-		(pin "BB_CS" input
-			(at 86.36 80.01 0)
-			(uuid "5f3598ae-45d4-43f5-b79b-787bbf3f3d23")
+		(pin "SPI1{SCK,MOSI,MISO}" input
+			(at 86.36 82.55 0)
+			(uuid "f0727fa2-cfc5-4a6e-9015-0aaabdeb947d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -523,9 +523,9 @@
 				(justify right)
 			)
 		)
-		(pin "SPI1{SCK,MOSI,MISO}" input
-			(at 86.36 82.55 0)
-			(uuid "f0727fa2-cfc5-4a6e-9015-0aaabdeb947d")
+		(pin "FLASH_CS" input
+			(at 86.36 80.01 0)
+			(uuid "1f1666b0-d45a-44fd-9c93-0f670f7e7056")
 			(effects
 				(font
 					(size 1.27 1.27)

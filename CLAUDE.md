@@ -55,11 +55,18 @@ No baro, no integrated ELRS receiver, no WS2812B onboard LEDs. SD card slot repl
 ## PIO Allocation
 PIO0: DShot (motors), PIO1: PIO UARTs, PIO2: LED strip + OSD
 
+## V0.3 Known Issues (ordered, fix in V0.4)
+- **C28 (22µF 0603 16V on +10V rail)**: 16V rating too low for 10V output — severe DC bias derating + no transient headroom. Change to 25V rated (e.g., CL10A226MQ8NRNC).
+- **R30 (6.8k)**: gives 9.42V not 10V. Change to 6.34k (E96) for 10.06V output.
+- **L2 (4.7µH)**: undersized for 10V rail at 6S input (116% ripple). Change to ~10µH (FTC303020D100MBCA, C7423323, same 3x3 footprint).
+- **D7 (green)**: LED0 should be blue per BF manufacturer guidelines.
+- **U3/U4 (LMR51420YFDDCR 2A)**: drop-in upgrade to LMR51430YFDDCR (C5219261) for 3A headroom. Same footprint/pinout.
+
 ## Open Issues
 1. **CRIT-2**: Motor pin numbering M1-M4 reversed vs BF OPENFC_RP2350B reference config — fix in board config.h OR swap J1-J4 labels.
-2. **CRIT-3**: OSD FB_OSD 3-pin mapping done (GPIO33=W, 34=EN, 35=SYNC). **No upstream BF driver yet** — needs custom PR or use MSP DisplayPort over UART0.
+2. **CRIT-3**: OSD FB_OSD 3-pin mapping remapped to GPIO4=W, GPIO5=EN, GPIO6=SYNC (consecutive, per BF PR#14882). **No upstream BF driver merged yet.**
 3. **CRIT-4**: No battery reverse polarity protection.
-4. **CRIT-5 (ESC connector P1 reversed)**: P1 JST SH 8-pin ESC connector is wired backwards vs BF standard — pin 1 is M4 (should be VBAT), pin 8 is +BATT (should be M4). Standard BF wire harness would short VBAT to GPIO31 → MCU death. Mirror pinout: 1=V+, 2=GND, 3=Current, 4=Telem, 5=M1, 6=M2, 7=M3, 8=M4. Also add ESC telemetry pin (currently missing).
+4. ~~**CRIT-5**: ESC connector P1 reversed~~ — **FIXED in V0.3**, pinout now matches BF 8-pin standard.
 5. **Blue LED0**: D7 is green; BF guideline calls for blue. Cosmetic, not code-enforced.
 
 ## Schematic Structure
