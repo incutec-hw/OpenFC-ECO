@@ -1,0 +1,123 @@
+(footprint "MouseBite-Slot-Jumper_0201"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Jumper for Mouse slot. SMD 0201 (0603 Metric)")
+	(tags "mousebite resistor jumper")
+	(property "Reference" "REF**"
+		(at 1.05 0 270)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a63a1fd1-21c4-4e7e-9318-eb11ae1edcb8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MouseBite-Slot-Jumper_0201"
+		(at -1.05 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "955a24b9-f3ec-4244-9bcd-556f7039de33")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a0aa31f-3497-4095-b405-290a20613071")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0a16b5a1-75f7-40a6-8b9c-435cb79e0b63")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd board_only exclude_from_pos_files exclude_from_bom dnp)
+	(fp_rect
+		(start -0.3 -0.65)
+		(end 0.3 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "1c7a9e48-99b5-483a-b0eb-d240179aa291")
+	)
+	(fp_line
+		(start -0.15 -0.3)
+		(end 0.15 -0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "24e45576-944f-4ce9-8c76-e9874c69f7cf")
+	)
+	(fp_line
+		(start -0.15 0.3)
+		(end -0.15 -0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6c23a683-a5cb-4e88-934b-2cd7ffbff80f")
+	)
+	(fp_line
+		(start 0.15 -0.3)
+		(end 0.15 0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bcd6f0dd-ee52-408a-88af-e72d763f6926")
+	)
+	(fp_line
+		(start 0.15 0.3)
+		(end -0.15 0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67f5a83f-a6b7-4e09-a343-d0370ac4c5b5")
+	)
+	(pad "1" smd roundrect
+		(at 0 -0.32)
+		(size 0.4 0.46)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "01981737-e89f-4069-81aa-992227e0f266")
+	)
+	(pad "2" smd roundrect
+		(at 0 0.32)
+		(size 0.4 0.46)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "b0a661ef-e47d-4f26-9d64-5ebbab687496")
+	)
+	(embedded_fonts no)
+)

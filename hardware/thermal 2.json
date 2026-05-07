@@ -1,0 +1,416 @@
+{
+  "summary": {
+    "total_checks": 24,
+    "active": 24,
+    "suppressed": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 23,
+    "info": 1,
+    "thermal_score": 95,
+    "total_board_dissipation_w": 0.374,
+    "hottest_component": {
+      "ref": "U7",
+      "tj_estimated_c": 81.1
+    },
+    "components_analyzed": 1,
+    "components_above_85c": 0,
+    "components_above_tjmax": 0,
+    "ambient_c": 25.0
+  },
+  "findings": [
+    {
+      "category": "thermal_safety",
+      "severity": "INFO",
+      "rule_id": "TS-005",
+      "confidence": "heuristic",
+      "title": "U7 (LP5912-3.3DRVR) Tj 81\u00b0C, margin 44\u00b0C",
+      "description": "ldo dissipates 0.374W in unknown \u2014 within safe thermal limits.",
+      "components": [
+        "U7"
+      ],
+      "recommendation": "",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C1 is 2.4mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C1",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C36 is 9.9mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C36",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C17 is 9.7mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C17",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C25 is 5.4mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C25",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C27 is 3.2mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C27",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C6 is 5.3mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C6",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C15 is 7.0mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C15",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C12 is 2.7mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C12",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C16 is 8.4mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C16",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C22 is 2.0mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C22",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C2 is 6.3mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C2",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C34 is 1.8mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C34",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C11 is 5.0mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C11",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C14 is 4.2mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C14",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C5 is 7.6mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C5",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C30 is 3.3mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C30",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C32 is 1.8mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C32",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C13 is 5.5mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C13",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C10 is 5.3mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C10",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C3 is 8.9mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C3",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C29 is 5.2mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C29",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C19 is 3.8mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C19",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_proximity",
+      "severity": "LOW",
+      "rule_id": "TP-001",
+      "confidence": "deterministic",
+      "title": "MLCC C4 is 4.5mm from U7 (LP5912-3.3DRVR) (Tj=81\u00b0C)",
+      "description": "Ceramic capacitors lose effective capacitance at elevated temperatures. X7R loses ~15% at 85\u00b0C, X5R loses ~30%.",
+      "components": [
+        "C4",
+        "U7"
+      ],
+      "recommendation": "Verify capacitor maintains adequate capacitance at the elevated temperature, or use C0G/NP0 dielectric for temperature-critical applications.",
+      "suppressed": false,
+      "suppression_reason": ""
+    }
+  ],
+  "thermal_assessments": [
+    {
+      "ref": "U7",
+      "value": "LP5912-3.3DRVR",
+      "component_type": "ldo",
+      "pdiss_w": 0.374,
+      "pdiss_source": "(5.0V - 3.3V) \u00d7 0.22A",
+      "package": "unknown",
+      "rtheta_ja_raw": 150.0,
+      "rtheta_ja_source": "default",
+      "pcb_correction": 1.0,
+      "pcb_correction_notes": [],
+      "rtheta_ja_effective": 150.0,
+      "ambient_c": 25.0,
+      "tj_estimated_c": 81.1,
+      "tj_max_c": 125.0,
+      "tj_max_source": "default_125",
+      "margin_c": 43.9,
+      "position": {
+        "x": 150.0375,
+        "y": 80.45
+      }
+    }
+  ],
+  "elapsed_s": 0.0,
+  "missing_info": {
+    "default_rtheta_ja": [
+      "U7"
+    ],
+    "default_tj_max": [
+      "U7"
+    ]
+  }
+}

@@ -1,0 +1,914 @@
+{
+  "summary": {
+    "total_checks": 19,
+    "active": 19,
+    "suppressed": 0,
+    "critical": 0,
+    "high": 7,
+    "medium": 11,
+    "low": 0,
+    "info": 1,
+    "emc_risk_score": 36
+  },
+  "target_standard": "fcc-class-b",
+  "findings": [
+    {
+      "category": "stackup",
+      "severity": "HIGH",
+      "rule_id": "SU-001",
+      "confidence": "deterministic",
+      "title": "Adjacent signal layers: F.Cu, In1.Cu",
+      "description": "Signal layers F.Cu and In1.Cu are adjacent without a reference plane between them. This causes high crosstalk and poor return path control for signals on both layers.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Reorder stackup to place a ground or power plane between every pair of signal layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "stackup",
+      "severity": "HIGH",
+      "rule_id": "SU-001",
+      "confidence": "deterministic",
+      "title": "Adjacent signal layers: In1.Cu, In2.Cu",
+      "description": "Signal layers In1.Cu and In2.Cu are adjacent without a reference plane between them. This causes high crosstalk and poor return path control for signals on both layers.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Reorder stackup to place a ground or power plane between every pair of signal layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "stackup",
+      "severity": "HIGH",
+      "rule_id": "SU-001",
+      "confidence": "deterministic",
+      "title": "Adjacent signal layers: In2.Cu, In3.Cu",
+      "description": "Signal layers In2.Cu and In3.Cu are adjacent without a reference plane between them. This causes high crosstalk and poor return path control for signals on both layers.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Reorder stackup to place a ground or power plane between every pair of signal layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "stackup",
+      "severity": "HIGH",
+      "rule_id": "SU-001",
+      "confidence": "deterministic",
+      "title": "Adjacent signal layers: In3.Cu, In4.Cu",
+      "description": "Signal layers In3.Cu and In4.Cu are adjacent without a reference plane between them. This causes high crosstalk and poor return path control for signals on both layers.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Reorder stackup to place a ground or power plane between every pair of signal layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "stackup",
+      "severity": "HIGH",
+      "rule_id": "SU-001",
+      "confidence": "deterministic",
+      "title": "Adjacent signal layers: In4.Cu, B.Cu",
+      "description": "Signal layers In4.Cu and B.Cu are adjacent without a reference plane between them. This causes high crosstalk and poor return path control for signals on both layers.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Reorder stackup to place a ground or power plane between every pair of signal layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "pdn",
+      "severity": "HIGH",
+      "rule_id": "PD-001",
+      "title": "+3.3V PDN anti-resonance exceeds target",
+      "description": "U7 (LP5912-3.3DRVR) +3.3V rail (analytical): target impedance 0.375\u03a9 (Vout=3.3V, 5% ripple, 0.4A transient). Anti-resonance peak(s) exceed target at: 263.0 MHz (0.45\u03a9). Decoupling: 1 caps (C34 22.0\u00b5F).",
+      "spice_verified": false,
+      "components": [
+        "U7",
+        "C34"
+      ],
+      "nets": [
+        "+3.3V"
+      ],
+      "recommendation": "Add 560pF 0603 MLCC near the IC power pins (SRF \u2248 263.0MHz fills the anti-resonance gap). (analytical \u2014 verify with SPICE if available)",
+      "confidence": "heuristic",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "pdn",
+      "severity": "HIGH",
+      "rule_id": "PD-001",
+      "title": "+5V_BUCK PDN anti-resonance exceeds target",
+      "description": "U4 (LMR51420YFDDCR) +5V_BUCK rail (analytical): target impedance 0.332\u03a9 (Vout=6.639V, 5% ripple, 1.0A transient). Anti-resonance peak(s) exceed target at: 229.1 MHz (0.54\u03a9). Decoupling: 1 caps (C29 22.0\u00b5F).",
+      "spice_verified": false,
+      "components": [
+        "U4",
+        "C29"
+      ],
+      "nets": [
+        "+5V_BUCK"
+      ],
+      "recommendation": "Add 680pF 0603 MLCC near the IC power pins (SRF \u2248 229.1MHz fills the anti-resonance gap). (analytical \u2014 verify with SPICE if available)",
+      "confidence": "heuristic",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "ground_plane",
+      "severity": "MEDIUM",
+      "rule_id": "GP-004",
+      "confidence": "deterministic",
+      "title": "Low ground plane fill ratio",
+      "description": "Ground zone on F.Cu has 9% fill ratio. Excessive routing or thermal relief patterns may be reducing ground plane effectiveness.",
+      "components": [],
+      "nets": [
+        "GND"
+      ],
+      "layer": "F.Cu",
+      "recommendation": "Reduce routing density on this layer or move signals to other layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "ground_plane",
+      "severity": "MEDIUM",
+      "rule_id": "GP-004",
+      "confidence": "deterministic",
+      "title": "Low ground plane fill ratio",
+      "description": "Ground zone on B.Cu has 22% fill ratio. Excessive routing or thermal relief patterns may be reducing ground plane effectiveness.",
+      "components": [],
+      "nets": [
+        "GND"
+      ],
+      "layer": "B.Cu",
+      "recommendation": "Reduce routing density on this layer or move signals to other layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "ground_plane",
+      "severity": "MEDIUM",
+      "rule_id": "GP-004",
+      "confidence": "deterministic",
+      "title": "Low ground plane fill ratio",
+      "description": "Ground zone on In1.Cu has 20% fill ratio. Excessive routing or thermal relief patterns may be reducing ground plane effectiveness.",
+      "components": [],
+      "nets": [
+        "GND"
+      ],
+      "layer": "In1.Cu",
+      "recommendation": "Reduce routing density on this layer or move signals to other layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "ground_plane",
+      "severity": "MEDIUM",
+      "rule_id": "GP-004",
+      "confidence": "deterministic",
+      "title": "Low ground plane fill ratio",
+      "description": "Ground zone on In4.Cu has 26% fill ratio. Excessive routing or thermal relief patterns may be reducing ground plane effectiveness.",
+      "components": [],
+      "nets": [
+        "GND"
+      ],
+      "layer": "In4.Cu",
+      "recommendation": "Reduce routing density on this layer or move signals to other layers.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "clock_routing",
+      "severity": "MEDIUM",
+      "rule_id": "CK-001",
+      "confidence": "deterministic",
+      "title": "Clock /BLACKBOX/SPI1.SCK on outer layer",
+      "description": "Clock net /BLACKBOX/SPI1.SCK is 56% routed on outer layers (microstrip). Inner stripline layers provide better shielding from radiation.",
+      "components": [],
+      "nets": [
+        "/BLACKBOX/SPI1.SCK"
+      ],
+      "recommendation": "Route clock signals on inner layers (stripline) when possible.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "clock_routing",
+      "severity": "MEDIUM",
+      "rule_id": "CK-001",
+      "confidence": "deterministic",
+      "title": "Clock /IMU/SPI0.CLKIN on outer layer",
+      "description": "Clock net /IMU/SPI0.CLKIN is 100% routed on outer layers (microstrip). Inner stripline layers provide better shielding from radiation.",
+      "components": [],
+      "nets": [
+        "/IMU/SPI0.CLKIN"
+      ],
+      "recommendation": "Route clock signals on inner layers (stripline) when possible.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "clock_routing",
+      "severity": "MEDIUM",
+      "rule_id": "CK-001",
+      "confidence": "deterministic",
+      "title": "Clock /RP2350A/XIN on outer layer",
+      "description": "Clock net /RP2350A/XIN is 100% routed on outer layers (microstrip). Inner stripline layers provide better shielding from radiation.",
+      "components": [],
+      "nets": [
+        "/RP2350A/XIN"
+      ],
+      "recommendation": "Route clock signals on inner layers (stripline) when possible.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "clock_routing",
+      "severity": "MEDIUM",
+      "rule_id": "CK-001",
+      "confidence": "deterministic",
+      "title": "Clock /RP2350A/XOUT on outer layer",
+      "description": "Clock net /RP2350A/XOUT is 100% routed on outer layers (microstrip). Inner stripline layers provide better shielding from radiation.",
+      "components": [],
+      "nets": [
+        "/RP2350A/XOUT"
+      ],
+      "recommendation": "Route clock signals on inner layers (stripline) when possible.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "clock_routing",
+      "severity": "MEDIUM",
+      "rule_id": "CK-001",
+      "confidence": "deterministic",
+      "title": "Clock /IMU/SPI0.SCK on outer layer",
+      "description": "Clock net /IMU/SPI0.SCK is 100% routed on outer layers (microstrip). Inner stripline layers provide better shielding from radiation.",
+      "components": [],
+      "nets": [
+        "/IMU/SPI0.SCK"
+      ],
+      "recommendation": "Route clock signals on inner layers (stripline) when possible.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "thermal_emc",
+      "severity": "MEDIUM",
+      "rule_id": "TH-001",
+      "confidence": "datasheet-backed",
+      "title": "C28 may have significant DC bias derating",
+      "description": "C28 (22.0\u00b5F X7R 0603) on +10V 12.565V rail: estimated 25% effective capacitance under DC bias (5.5\u00b5F actual vs 22.0\u00b5F nominal). SRF shifts by 2.0\u00d7 \u2014 may create gaps in decoupling coverage.",
+      "components": [
+        "C28",
+        "U3"
+      ],
+      "nets": [
+        "+10V"
+      ],
+      "recommendation": "Use a larger package (lower derating), higher voltage rating, or C0G/NP0 dielectric for critical decoupling. Alternatively, add more caps to compensate.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "switching_emc",
+      "severity": "MEDIUM",
+      "rule_id": "SW-003",
+      "confidence": "heuristic",
+      "title": "Large hot loop for U4",
+      "description": "U4 (LMR51420YFDDCR) hot loop area \u2248 31mm\u00b2 (triangle: C24 \u2192 U4 \u2192 L3). Recommended: <25mm\u00b2 for low EMI.",
+      "components": [
+        "U4",
+        "L3",
+        "C24"
+      ],
+      "nets": [
+        "__unnamed_7"
+      ],
+      "recommendation": "Place C24, U4, and L3 in a tight triangle. Minimize trace length between them. Input cap should be adjacent to the IC with the inductor on the opposite side.",
+      "suppressed": false,
+      "suppression_reason": ""
+    },
+    {
+      "category": "emission_estimate",
+      "severity": "INFO",
+      "rule_id": "EE-001",
+      "confidence": "heuristic",
+      "title": "Board cavity resonance frequencies",
+      "description": "Board (38\u00d738mm, \u03b5r=4.5) cavity resonances: (0,1) at 1884 MHz; (1,0) at 1884 MHz; (1,1) at 2665 MHz. PDN impedance spikes at these frequencies. Ensure adequate decoupling at and around these frequencies.",
+      "components": [],
+      "nets": [],
+      "recommendation": "Add decoupling capacitors with SRF near these frequencies.",
+      "suppressed": false,
+      "suppression_reason": ""
+    }
+  ],
+  "per_net_scores": [
+    {
+      "net": "GND",
+      "score": 88,
+      "finding_count": 4,
+      "rules": [
+        "GP-004"
+      ]
+    },
+    {
+      "net": "+3.3V",
+      "score": 92,
+      "finding_count": 1,
+      "rules": [
+        "PD-001"
+      ]
+    },
+    {
+      "net": "+5V_BUCK",
+      "score": 92,
+      "finding_count": 1,
+      "rules": [
+        "PD-001"
+      ]
+    },
+    {
+      "net": "/BLACKBOX/SPI1.SCK",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "CK-001"
+      ]
+    },
+    {
+      "net": "/IMU/SPI0.CLKIN",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "CK-001"
+      ]
+    },
+    {
+      "net": "/RP2350A/XIN",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "CK-001"
+      ]
+    },
+    {
+      "net": "/RP2350A/XOUT",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "CK-001"
+      ]
+    },
+    {
+      "net": "/IMU/SPI0.SCK",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "CK-001"
+      ]
+    },
+    {
+      "net": "+10V",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "TH-001"
+      ]
+    },
+    {
+      "net": "__unnamed_7",
+      "score": 97,
+      "finding_count": 1,
+      "rules": [
+        "SW-003"
+      ]
+    }
+  ],
+  "test_plan": {
+    "frequency_bands": [
+      {
+        "band": "30-88 MHz",
+        "freq_min_hz": 30000000.0,
+        "freq_max_hz": 88000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      },
+      {
+        "band": "88-216 MHz",
+        "freq_min_hz": 88000000.0,
+        "freq_max_hz": 216000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      },
+      {
+        "band": "216-960 MHz",
+        "freq_min_hz": 216000000.0,
+        "freq_max_hz": 960000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      },
+      {
+        "band": "960-40000 MHz",
+        "freq_min_hz": 960000000.0,
+        "freq_max_hz": 40000000000.0,
+        "risk_level": "none",
+        "source_count": 0,
+        "sources": []
+      }
+    ],
+    "interface_risks": [
+      {
+        "connector": "J38",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J28",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J27",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J49",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J5",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J42",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J46",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J30",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J13",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J36",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J25",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J52",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J32",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J14",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J37",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J8",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J44",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J50",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J12",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J11",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J39",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J1",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J15",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J18",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J45",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J33",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J40",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J47",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J22",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J43",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J26",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J34",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J41",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J21",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J35",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J2",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J53",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J29",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J48",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J54",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J31",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J10",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "USB1",
+        "value": "TYPE-C 16P QTWT",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J7",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "J4",
+        "value": "5V",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      },
+      {
+        "connector": "P1",
+        "value": "SM08B-SRSS-TB(LF)(SN)",
+        "protocol": "unknown",
+        "risk_score": 3,
+        "reasons": [
+          "General I/O"
+        ]
+      }
+    ],
+    "probe_points": [
+      {
+        "x": 149.6,
+        "y": 94.5,
+        "type": "inductor",
+        "ref": "L1",
+        "reason": "Switching inductor \u2014 highest dI/dt source"
+      },
+      {
+        "x": 142.0,
+        "y": 80.8,
+        "type": "inductor",
+        "ref": "L3",
+        "reason": "Switching inductor \u2014 highest dI/dt source"
+      },
+      {
+        "x": 155.6,
+        "y": 97.3,
+        "type": "inductor",
+        "ref": "L2",
+        "reason": "Switching inductor \u2014 highest dI/dt source"
+      },
+      {
+        "x": 153.8,
+        "y": 80.7,
+        "type": "crystal",
+        "ref": "X1",
+        "reason": "Crystal/oscillator \u2014 clock harmonics source"
+      }
+    ]
+  },
+  "regulatory_coverage": {
+    "market": "us",
+    "applicable_standards": [
+      "FCC Part 15 Class B",
+      "FCC Part 15 Class B"
+    ],
+    "coverage_matrix": [
+      {
+        "standard": "FCC Part 15 Class B",
+        "test_type": "radiated",
+        "coverage": "minimal",
+        "checked_rules": [
+          "GP-004",
+          "CK-001",
+          "SU-001",
+          "EE-001"
+        ],
+        "total_applicable_rules": 23,
+        "note": "Design rule checks identify common radiation sources. Cannot predict absolute emission levels."
+      },
+      {
+        "standard": "FCC Part 15 Class B",
+        "test_type": "conducted",
+        "coverage": "indirect",
+        "checked_rules": [],
+        "total_applicable_rules": 4,
+        "note": "Switching harmonic analysis and decoupling checks. EMI filter verification not yet implemented."
+      }
+    ]
+  },
+  "board_info": {
+    "board_width_mm": 37.5,
+    "board_height_mm": 37.5,
+    "layer_count": 6,
+    "footprint_count": 164,
+    "via_count": 217,
+    "has_stackup": true,
+    "board_thickness_mm": 1.0278,
+    "total_components": 36,
+    "total_nets": 24
+  },
+  "elapsed_s": 0.002
+}

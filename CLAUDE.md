@@ -8,7 +8,7 @@ No baro, no integrated ELRS receiver, no WS2812B onboard LEDs. SD card slot repl
 | IC | Part | LCSC | Bus |
 |----|------|------|-----|
 | MCU | RP2354B (QFN-80, 2MB flash) | C39843328 | — |
-| IMU | LSM6DSV16XTR | C5267406 | SPI0 (GPIO18-20), CS=GPIO14, INT=GPIO13 |
+| IMU | ICM-42688-P | C2904815 | SPI0 (GPIO18-20), CS=GPIO14, INT=GPIO13 |
 | 10V Buck (sw) | LMR51420YFDDCR (2A) | C7296200 | EN=GPIO11; pin-compat drop-in to 3A: LMR51430YFDDCR (C5219261) |
 | 5V Buck (always-on) | LMR51420YFDDCR (2A) | C7296200 | pin-compat drop-in to 3A: LMR51430YFDDCR (C5219261) |
 | 3.3V LDO | LP5912-3.3DRVR | C524780 | — |
@@ -59,7 +59,7 @@ PIO0: DShot (motors), PIO1: PIO UARTs, PIO2: LED strip + OSD
 - **C28 (22µF 0603 16V on +10V rail)**: 16V rating too low for 10V output — severe DC bias derating + no transient headroom. Change to 25V rated (e.g., CL10A226MQ8NRNC).
 - **R30 (6.8k)**: gives 9.42V not 10V. Change to 6.34k (E96) for 10.06V output.
 - **L2 (4.7µH)**: undersized for 10V rail at 6S input (116% ripple). Change to ~10µH (FTC303020D100MBCA, C7423323, same 3x3 footprint).
-- **D7 (green)**: LED0 should be blue per BF manufacturer guidelines.
+- **D7 (green)**: LED0 must be blue — **hard requirement** per BF manufacturer design guidelines §3.1.4.6. Green LED0 fails manufacturer certification. LED0 (blue, required), LED1 (green, preferred), LED2 (amber, optional). See https://betaflight.com/docs/development/manufacturer/manufacturer-design-guidelines#3146-leds and https://betaflight.com/docs/development/FC-LEDs.
 - **U3/U4 (LMR51420YFDDCR 2A)**: drop-in upgrade to LMR51430YFDDCR (C5219261) for 3A headroom. Same footprint/pinout.
 
 ## Open Issues
@@ -67,7 +67,7 @@ PIO0: DShot (motors), PIO1: PIO UARTs, PIO2: LED strip + OSD
 2. **CRIT-3**: OSD FB_OSD 3-pin mapping remapped to GPIO4=W, GPIO5=EN, GPIO6=SYNC (consecutive, per BF PR#14882). **No upstream BF driver merged yet.**
 3. **CRIT-4**: No battery reverse polarity protection.
 4. ~~**CRIT-5**: ESC connector P1 reversed~~ — **FIXED in V0.3**, pinout now matches BF 8-pin standard.
-5. **Blue LED0**: D7 is green; BF guideline calls for blue. Cosmetic, not code-enforced.
+5. **Blue LED0**: D7 is green; BF manufacturer design guidelines §3.1.4.6 **require** LED0 to be blue. Not cosmetic — green LED0 fails manufacturer certification. Must change for V0.4.
 
 ## Schematic Structure
 `hardware/` — KiCad 9 hierarchical: root `OpenFC.kicad_sch` + sub-sheets:

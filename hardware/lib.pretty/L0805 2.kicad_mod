@@ -1,0 +1,238 @@
+(footprint "L0805"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "aca95408-1c70-49da-a139-ae4421cbae18")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "L0805"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "41c60db3-f4fa-48c2-bea9-1bd335ca83e0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c65b0e6f-2ec4-4d23-9132-9b2fbe0b0f87")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3d58b8c9-8be4-4e41-ba0d-c022c4b71787")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.94 -0.76)
+		(end -1.94 0.64)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5938e63e-8f99-430c-b760-88d1f0d78db2")
+	)
+	(fp_line
+		(start -1.94 0.64)
+		(end -1.94 0.76)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c2050024-7ca7-4934-9f56-e94a273692bd")
+	)
+	(fp_line
+		(start -1.94 0.76)
+		(end -1.69 1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "acd6742e-10e0-47e2-997b-34c260bac549")
+	)
+	(fp_line
+		(start -1.69 -1.02)
+		(end -1.94 -0.76)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "05125a3f-e76e-4359-8370-63d394f3576a")
+	)
+	(fp_line
+		(start -1.69 1.02)
+		(end -0.42 1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "849757a8-1b62-4a9d-9c7b-865096f1bdb7")
+	)
+	(fp_line
+		(start -1.56 -1.02)
+		(end -1.69 -1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c51433d9-e847-4460-bdcc-a804c66977a8")
+	)
+	(fp_line
+		(start -0.42 -1.02)
+		(end -1.56 -1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b8cd1d6-2c19-4605-b1a9-f61d2aa2d2a0")
+	)
+	(fp_line
+		(start 0.34 1.02)
+		(end 1.48 1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "990e3288-f095-44c8-8d6d-9e9a513ea9ce")
+	)
+	(fp_line
+		(start 1.48 1.02)
+		(end 1.61 1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dbdbda80-5775-428e-af43-1dc4538ab5e3")
+	)
+	(fp_line
+		(start 1.61 -1.02)
+		(end 0.34 -1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f2a89bb8-7b7d-45e9-b5b9-a9767900cee3")
+	)
+	(fp_line
+		(start 1.61 1.02)
+		(end 1.87 0.76)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "47d08a46-c926-435f-898c-2a5ba3e586ed")
+	)
+	(fp_line
+		(start 1.87 -0.76)
+		(end 1.61 -1.02)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "15e00341-e082-4aeb-ab39-d60abf84d01b")
+	)
+	(fp_line
+		(start 1.87 -0.63)
+		(end 1.87 -0.76)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "66b02561-bfa2-45a7-a5cd-e26bb98e7407")
+	)
+	(fp_line
+		(start 1.87 0.76)
+		(end 1.87 -0.63)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bba3379b-5516-4731-a826-e6f67a3bac6b")
+	)
+	(fp_circle
+		(center -1 0.64)
+		(end -0.97 0.64)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "52b57c5d-e5b2-4924-8847-b6fca9c561ce")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "97801fec-2357-40ac-90d4-0c12ca3071da")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.97 0)
+		(size 1.13 1.38)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "67c88d9c-0797-4d1f-980e-540895a52c1c")
+	)
+	(pad "2" smd rect
+		(at 0.97 0)
+		(size 1.13 1.38)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c0880796-204c-47ac-9abe-5b2e14574eeb")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/lib.3dshapes/R0805_L2.0-W1.3-H0.6.wrl"
+		(offset
+			(xyz 0 0 -0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
