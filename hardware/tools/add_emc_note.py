@@ -6,7 +6,7 @@ import os
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                      "OpenFC.kicad_sch")
 
-CHECKLIST = """EMC CHECKLIST - OpenFC-ECO (see tools/EMC_CHECKLIST.md for details)
+CHECKLIST = """EMC CHECKLIST - OpenFC-Lite (see tools/EMC_CHECKLIST.md for details)
 
 BUCKS (U3/U4, L2/L3):
 - CIN+COUT GND: local top-side island, 2 stitching vias to inner plane

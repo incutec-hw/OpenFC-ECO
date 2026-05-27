@@ -1,57 +1,59 @@
-# OpenFC-ECO
+# OpenFC-Lite-Mini
 
-Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
+Open-source Betaflight flight controller — **20×20 mm**, 6-layer, 3S–6S, built around the RP2354B microcontroller. Compact and low-cost: external RX over UART, microSD blackbox, analog OSD.
 
 <p>
-<img src="images/openfc-eco-v03-top.png" width="400" alt="OpenFC-ECO V0.3 Top" />
-<img src="images/openfc-eco-v03-bottom.png" width="400" alt="OpenFC-ECO V0.3 Bottom" />
+<img src="images/openfc-lite-mini-rev1-top.png" width="400" alt="OpenFC-Lite-Mini Rev 1 Top" />
+<img src="images/openfc-lite-mini-rev1-bottom.png" width="400" alt="OpenFC-Lite-Mini Rev 1 Bottom" />
 </p>
+
+> This repository is the **Mini** (20×20). A larger **OpenFC-Lite** (30.5×30.5 mm, bigger pads, more I/O, full-size SD) will be derived from this design once the Mini is finalized.
+
+## At a glance
+
+| | |
+|---|---|
+| MCU | RP2354B — dual Cortex-M33 @ 150 MHz, 2 MB flash, QFN-80 |
+| IMU | 6-axis, SPI0 (LGA-14 footprint — part TBD, see [IMU](#imu)) |
+| Blackbox | microSD card slot (TF-021B-H265) on SPI1 |
+| OSD | analog, PIO-driven (sync separator + op-amp + SPDT switch) |
+| Power | 3S–6S; switchable 10V (VTX/cam) + always-on 5V |
+| Size | 20×20 mm, 6-layer |
+| RX | external, over UART |
+| USB | USB-C, USB-CDC for configuration |
+
+Intentionally omitted to keep it small and cheap: barometer, integrated ELRS receiver, onboard WS2812B LEDs (LED-strip pad only), onboard SPI blackbox flash (microSD instead).
 
 ## Status
 
-V0.3 boards have been received and brought up. Custom Betaflight target (`OPENFC_ECO_RP2350B`) builds and flashes; USB enumeration, IMU, SD card blackbox, and the switchable 10V VTX rail are all confirmed working on bench. Bring-up of motors, external RX, and the analog OSD chain is in progress. See [Known Issues](#known-issues--v04-fix-list) for V0.3 hardware bugs being addressed in V0.4.
-
-## What's Different from OpenFC
-
-| Feature | OpenFC | OpenFC-ECO |
-|---------|--------|------------|
-| MCU | RP2354B | RP2354B |
-| IMU | LSM6DSV16XTR | **ICM-42688-P** (V0.3 was LSM6DSV16XTR — see HW-12 in plan) |
-| Barometer | BMP388 | **Removed** |
-| Blackbox | BY25Q128ASWIG (16 MB SPI flash) | **MicroSD card slot (TF-021B-H265)** |
-| ELRS Receiver | ESP32-C3FH4 + SX1281 (break-off) | **Removed** — use external RX |
-| Onboard WS2812B LEDs | 16× (4 corners) | **Removed** — LED strip pad only |
-| Compass | LIS3MDLTR (DNP) | **Removed** |
-| OSD | PIO-driven analog (sync-sep + opamp + mux) | PIO-driven analog (sync-sep + opamp + mux) |
-| Power | 3S-6S, 10V/5V | 3S-6S, 10V/5V |
-| Board | 30×30 mm, 6-layer | 30×30 mm, 6-layer |
+Rev 1 boards have been received and brought up. The custom Betaflight target builds and flashes; USB enumeration, IMU, SD card blackbox, and the switchable 10V VTX rail are confirmed working on bench. Bring-up of motors, external RX, and the analog OSD chain is in progress. See the [Rev 2 Change List](#rev-2-change-list) for hardware fixes scheduled for the next revision.
 
 ## Specifications
 
 ### Core
-- **MCU:** RP2354B — Raspberry Pi dual-core ARM Cortex-M33 @ 150 MHz, 2 MB integrated stacked flash, QFN-80
-- **IMU:** ICM-42688-P — 6-axis MEMS, SPI, dedicated 1.8V LDO, 8 kHz ODR. (V0.3 prototype shipped with LSM6DSV16XTR; swapped to ICM-42688-P after the chip's ~25 kRPM MEMS resonance was identified as the cause of in-flight gyro saturation events on this airframe. ICM-42688-P is footprint-compatible — same LGA-14 2.5×3.0 mm pad layout, same SPI / INT / VDD pinout — so the V0.3 hardware works with either chip and the V0.4 PCB is unchanged below the IMU.)
+- **MCU:** RP2354B — dual-core ARM Cortex-M33 @ 150 MHz, 2 MB integrated stacked flash, QFN-80
+- **IMU:** 6-axis MEMS on SPI0, dedicated 1.8V analog LDO (see [IMU](#imu))
 - **Blackbox:** TF-021B-H265 microSD card slot on SPI1
 - **USB:** USB-C, USB-CDC for configuration
 
 ### Power tree
 | Rail | Source | Regulator | Notes |
 |---|---|---|---|
-| +10V (switchable) | +BATT | LMR51420YFDDCR (U6, 2A) | EN gated by GPIO11 (PINIO1). VTX/cam rail. Pin-compatible 3A drop-in: LMR51430YFDDCR. |
-| +5V (always-on) | +BATT | LMR51420YFDDCR (U7, 2A) | Pin-compatible 3A drop-in: LMR51430YFDDCR. |
-| +5V (USB/BATT mux) | +5V_BUCK + +5V_USB | TPS2116DRLR | Auto-selects active source. |
-| +3.3V | +5V | LP5912-3.3DRVR | 500 mA LDO. |
-| +1.8V (gyro analog) | +5V | NCV8187AMT180TAG | Isolated supply for IMU noise rejection. |
+| +10V (switchable) | +BATT | LMR51420YFDDCR (U3, 2A) | EN gated by GPIO11 (PINIO1). VTX/cam rail. 3A drop-in: LMR51430YFDDCR. |
+| +5V (always-on) | +BATT | LMR51420YFDDCR (U4, 2A) | 3A drop-in: LMR51430YFDDCR. |
+| +5V (USB/BATT mux) | +5V_BUCK + +5V_USB | TPS2116DRLR (U5) | Auto-selects active source. |
+| +3.3V | +5V | LP5912-3.3DRVR (U7) | 500 mA LDO. |
+| +1.8V (gyro analog) | +5V | NCV8187AMT180TAG (U6) | Isolated supply for IMU noise rejection. |
 | +1.1V (MCU core) | +3.3V | RP2354B internal VREG | — |
 
 ### Motor outputs
-- 4× PIO-driven DShot motor outputs (DShot600, bidirectional telemetry supported)
+- 4× PIO-driven DShot outputs (DShot600, bidirectional telemetry supported)
 - M1=GPIO31, M2=GPIO30, M3=GPIO29, M4=GPIO28
 
 ### Connectors
 - **USB-C** — configuration and firmware flashing
-- **U1** — 6-pin SMD JST SH digital VTX connector (matches Betaflight standard: +10V/GND/TX/RX/GND/SBUS)
-- **P1** — 8-pin TH JST SH ESC harness *(reversed pinout in V0.3 — must mirror in V0.4)*
+- **U8** — 6-pin SMD JST SH digital VTX connector (matches Betaflight standard: +10V/GND/TX/RX/GND/SBUS)
+- **P1** — 8-pin TH JST SH ESC harness *(reversed pinout on Rev 1 — must mirror + add telem in Rev 2)*
 - **J7/J8** — I2C0 expansion pads (SDA/SCL, with pull-ups to 3.3V)
 
 ### Serial / I/O
@@ -76,36 +78,41 @@ V0.3 boards have been received and brought up. Custom Betaflight target (`OPENFC
 - 10V rail enable (GPIO11) — exposed as PINIO1/USER1 in firmware
 
 ### Analog OSD
-- TLV3201AIDBVR — fast comparator, sync separator on incoming composite video
-- TLV9061IDPWR — op-amp output buffer to camera signal
-- SN74LVC1G3157DTBR — SPDT analog switch, selects between camera passthrough, black-pixel injection, and white-pixel injection
+- TLV3201AIDBVR (U20) — fast comparator, sync separator on incoming composite video
+- TLV9061IDPWR (U19) — op-amp output buffer to the camera signal
+- SN74LVC1G3157DTBR (U18) — SPDT analog switch: camera passthrough, black-pixel inject, white-pixel inject
 - Driven by RP2354B PIO2 — pixel-level timing for character overlay on PAL/NTSC composite
+
+## IMU
+
+The IMU footprint is LGA-14 (2.5×3 mm), routed with pins 2/3 → GND and pins 10/11 → NC, so it accepts **both TDK (ICM-426xx/456xx) and ST (LSM6D*) families**. Choosing the IMU is a part-population decision, not a layout change.
+
+- **Rev 1** populates **LSM6DSV16XTR** for development only.
+- **The Rev 2 IMU is not yet decided** — to be selected after more bench and flight testing.
+- Note: TDK parts use a CLKIN line to eliminate sample-timing jitter; ST parts have no CLKIN/SYNC. This couples to the SPI-bus cleanup in the change list below.
 
 ## Firmware
 
-A custom Betaflight target lives in the [Betaflight config tree](https://github.com/betaflight/config) under `configs/OPENFC_ECO_RP2350B`:
+A custom Betaflight target (`OPENFC_LITE_MINI_RP2350B`, `MANUFACTURER_ID = OPFC`, `FC_TARGET_MCU = RP2350B`) defines:
 
-- `FC_TARGET_MCU = RP2350B`
-- `BOARD_NAME = OPENFC_ECO_RP2350B`
-- `MANUFACTURER_ID = OPFC`
-- Motor map mirrors the V0.3 hardware (M1..M4 = GPIO31..GPIO28)
+- Motor map matching the Rev 1 silkscreen (M1..M4 = GPIO31..GPIO28)
 - `USE_SDCARD_SPI` on SPI1 for blackbox
-- `USE_PINIO` on GPIO11 for switchable 10V VTX rail
-- FB_OSD framework wired but disabled by default (uncomment `ENABLE_FB_OSD` once the analog OSD chain is verified on hardware)
+- `USE_PINIO` on GPIO11 for the switchable 10V VTX rail
+- FB_OSD framework wired but disabled by default (enable once the analog OSD chain is verified on hardware — note the RP2350B FB_OSD driver is still an open upstream PR stack)
 
-Build (requires a Betaflight checkout with `pico-sdk` and the BF-pinned ARM toolchain installed):
+Build (requires a Betaflight checkout with `pico-sdk` and the BF-pinned ARM toolchain):
 
 ```sh
 make picotool_install
 make arm_sdk_install
-make CONFIG=OPENFC_ECO_RP2350B
+make CONFIG=OPENFC_LITE_MINI_RP2350B
 ```
 
-Output is a `.uf2` in `obj/`. Hold BOOTSEL on the board, plug in USB, drag the UF2 onto the `RP2350` mass-storage drive that mounts.
+Output is a `.uf2` in `obj/`. Hold BOOTSEL, plug in USB, and drag the UF2 onto the `RP2350` mass-storage drive that mounts.
 
 ## PIO Allocation
 
-The RP2350B has 3 PIO blocks × 4 state machines (12 total). OpenFC-ECO uses them as:
+The RP2350B has 3 PIO blocks × 4 state machines (12 total):
 
 | Block | Function |
 |---|---|
@@ -113,30 +120,57 @@ The RP2350B has 3 PIO blocks × 4 state machines (12 total). OpenFC-ECO uses the
 | PIO1 | Software UART (PIO UART0 + PIO UART1 — TX and RX programs) |
 | PIO2 | LED strip + analog OSD pixel timing |
 
-## Known Issues / V0.4 Fix List
+## Revision History
 
-V0.3 hardware bugs being addressed in the next revision:
+| Rev | Status | Notes |
+|---|---|---|
+| **Rev 1** | current | Received and in bench bring-up |
+| **Rev 2** | in design | See [Rev 2 Change List](#rev-2-change-list) |
 
-| ID | Component | Issue | Fix |
-|---|---|---|---|
-| HW-1 | C28 | 16V rated cap on +10V rail — severe DC bias derating, no transient headroom | 25V rated (e.g. CL10A226MQ8NRNC) |
-| HW-2 | R30 | 6.8k feedback resistor produces 9.42V on +10V rail | 6.34k (E96), gives 10.06V |
-| HW-3 | L2 | 4.7µH inductor undersized for +10V rail at 6S input (116% ripple) | 10µH (FTC303020D100MBCA) |
-| HW-4 | D7 | LED0 is green; Betaflight manufacturer guidelines §3.1.4.6 require blue | Blue LED |
-| HW-5 | U3/U4 | LMR51420YFDDCR (2A) — limited headroom | Drop-in upgrade to LMR51430YFDDCR (3A) |
-| HW-6 | P1 | ESC connector pinout reversed vs Betaflight 8-pin standard, also missing telemetry pin | Mirror pinout, add telem pin |
-| HW-7 | — | No battery reverse-polarity protection | Add PMOS RPP |
-| HW-8 | U2 (NCV8187) | 300 mA gyro LDO; BF guidelines §3.1.2 recommend ≥500 mA | Upgrade to ≥500 mA LDO |
-| HW-9 | — | LED strip pad only; consider adding standard onboard LEDs per BF spec | TBD |
-| HW-10 | Board outline | 30×30 mm; BF stack standard is 30.5×30.5 mm | Bump to 30.5×30.5 |
-| HW-11 | Beeper | Verify active buzzer + NPN driver topology per §3.1.4 | Audit |
+## Rev 2 Change List
 
-The motor pin numbering issue (M1..M4 reversed vs the Betaflight `OPENFC_RP2350B` reference config) is **resolved in firmware** — the `OPENFC_ECO_RP2350B` Betaflight target maps motor pins to match the V0.3 silkscreen so no physical rework is needed.
+Schematic changes for the next revision. **Schematic and board edits are done manually** — this list is the spec to run down.
+
+Legend: 🔧 field swap (value/part only) · 🔌 wiring / topology change · 🔍 decision / investigation
+
+### Power
+- 🔧 **HW-1 — C28** (10V buck output cap): 16V → **25V**, 22µF 0603. DC-bias derating + transient headroom.
+- 🔧 **HW-2 — R30** (10V FB, bottom of R29=100k divider): 6.8k → **6.34k** (E96). Corrects output 9.42V → 10.06V.
+- 🔧 **HW-3 — L2** (10V inductor): 4.7µH → **10µH** (FTC303020D100MBCA, C7423323). ⚠️ The 10µH was mistakenly applied to **L3 (5V rail)**; **L2 (10V)** is the rail that actually needs it.
+- 🔧 **L3** (5V inductor) field fix: Value says 10µH but MPN/LCSC still the old 4.7µH part. Make consistent — revert to 4.7µH unless 10µH is intended.
+- 🔧 **HW-5 — U3/U4** bucks (optional): LMR51420 (2A) → **LMR51430** (3A), C5219261. Drop-in, same SOT-23-6.
+- 🔧 **HW-8 — U6** gyro LDO: NCV8187 (300 mA) → **≥500 mA** in the same WDFN-6 footprint (part TBD; BF §3.1.2).
+
+### MCU / USB (per Raspberry Pi RP2350 datasheet)
+- 🔧 **R12 / R13** USB series resistors: 30Ω → **27Ω**.
+- 🔧 **R14** VREG_AVDD resistor: 30Ω → **33Ω**.
+- 🔍 **D1** USB ESD (USBLC6-2P6): keep or remove? ESD on USB alone — but not the other exposed pads — is inconsistent. Decide.
+
+### LEDs
+- 🔌 All status/indicator LEDs: **0201 → 0402** (0201 too fragile — broke during nut install). Footprint change.
+- 🔧 **HW-4 — D2** (LED0 status, GPIO12): green → **blue** (BF §3.1.4.6 requires blue LED0). D4/D5/D7/D10 are power-rail indicators.
+- 🔧 LED series resistors: raise (too bright); recompute per rail voltage. Production colors TBD (purple needs >3.3V).
+
+### Signals / connectivity (wiring — manual)
+- 🔌 **SPI0 cleanup**: group **GYRO_CS** into the SPI bus (with SCK/MOSI/MISO); drop the IMU **CLKIN/SYNC** net (GPIO15) — ST gyros have no SYNC. Same regroup for **FLASH_CS** (SD). ⚠️ If a TDK IMU is chosen, CLKIN is useful — couple to the IMU decision.
+- 🔌 **Remove SBUS inverter** (GPIO9 / SBUS_INVERT circuit).
+- 🔌 **HW-6 — ESC connector P1**: mirror reversed pinout **+ add telemetry pin** (BF 8-pin: Current = pin 3, Telem = pin 4). **Safety-critical** — current pinout shorts VBAT to a GPIO on a standard BF harness.
+- 🔌 **HW-7** — Add **battery reverse-polarity protection** (PMOS RPP).
+- 🔌 **HW-11 — Beeper**: active buzzer + NPN driver (300–1000Ω base R) per BF §3.1.4.
+- 🔌 **SD card**: wire compatible with both SPI and SDIO; use SPI for now, switch to SDIO via a BF update if supported on Pico.
+
+### Decisions / investigations
+- 🔍 **IMU** — undecided for Rev 2; see [IMU](#imu).
+- 🔍 **U5 power MUX** — clarify TPS2116 vs TPS2117 (which part/behavior is intended).
+- 🔍 **SDIO on Pico** — does Betaflight support SDIO blackbox on RP2350B? (Madflight wants it too.)
+- 🔍 **CRIT-2 — motor order** M1–M4 reversed vs the Betaflight RP2350B reference config — resolve in the firmware target or swap silk.
+- 🔍 **CRIT-3 — FB_OSD upstream**: the RP2350B analog-OSD driver PR stack (#14882) is still open; no flyable upstream binary yet. Track before tape-out.
+- 🔍 Add **SWD connector** (4-pin JST SH: 3V3/GND/SWDIO/SWCLK) per BF.
 
 ## Repository Structure
 
 ```
-OpenFC-ECO/
+OpenFC-Lite-Mini/
 ├── README.md
 ├── LICENSE
 ├── hardware/                ← KiCad 9 project, libraries, and production files
@@ -147,7 +181,7 @@ OpenFC-ECO/
 │   ├── lib.kicad_sym        ← Project-local symbol library
 │   ├── lib.pretty/          ← Project-local footprint library
 │   ├── lib.3dshapes/        ← Project-local 3D models
-│   ├── production/          ← JLCPCB production exports per version
+│   ├── production/          ← JLCPCB production exports, per revision
 │   └── tools/               ← Analysis scripts (Python, kicad-skip / pcbnew API)
 └── images/                  ← Board renders
 ```
@@ -159,7 +193,7 @@ All symbol, footprint, and 3D model libraries are project-local — no external 
 - `OpenFC.kicad_sch` — top-level
 - `rp2350a.kicad_sch` — RP2354B microcontroller and supporting circuitry
 - `power.kicad_sch` — power supply and regulation (10V buck, 5V buck, 3.3V/1.8V LDOs, 5V mux)
-- `imu.kicad_sch` — LSM6DSV16XTR IMU
+- `imu.kicad_sch` — 6-axis IMU on SPI0 (LGA-14 2.5×3 footprint; Rev 1 populates LSM6DSV16XTR for dev — see [IMU](#imu))
 - `osd.kicad_sch` — analog OSD chain (TLV3201 sync sep + TLV9061 buffer + SN74LVC1G3157 switch)
 - `blackbox.kicad_sch` — TF-021B-H265 microSD card slot
 - `pads.kicad_sch` — solder pads and connectors

@@ -1,4 +1,4 @@
-# OpenFC-ECO Design Audit
+# OpenFC-Lite Design Audit
 
 Generated from `OpenFC.kicad_sch` + `OpenFC.kicad_pcb` via kicad-skip + pcbnew.
 

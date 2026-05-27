@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OpenFC-ECO: Remove sub-sheets not needed for ECO variant.
+OpenFC-Lite: Remove sub-sheets not needed for ECO variant.
 
 Removes: baro, blackbox, elrs, leds (WS2812B), compass
 Keeps: rp2350a, power, pads, osd, imu
