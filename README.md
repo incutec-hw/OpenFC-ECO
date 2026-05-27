@@ -1,19 +1,19 @@
-# OpenFC-ECO
+# OpenFC-Lite
 
-Stripped-down variant of [OpenFC](https://github.com/Just4Stan/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
+Stripped-down variant of [OpenFC](https://github.com/incutec-hw/OpenFC) — open-source Betaflight flight controller based on the RP2354B microcontroller. Same core design, fewer peripherals, lower cost.
 
 <p>
-<img src="images/openfc-eco-v03-top.png" width="400" alt="OpenFC-ECO V0.3 Top" />
-<img src="images/openfc-eco-v03-bottom.png" width="400" alt="OpenFC-ECO V0.3 Bottom" />
+<img src="images/openfc-lite-v03-top.png" width="400" alt="OpenFC-Lite V0.3 Top" />
+<img src="images/openfc-lite-v03-bottom.png" width="400" alt="OpenFC-Lite V0.3 Bottom" />
 </p>
 
 ## Status
 
-V0.3 boards have been received and brought up. Custom Betaflight target (`OPENFC_ECO_RP2350B`) builds and flashes; USB enumeration, IMU, SD card blackbox, and the switchable 10V VTX rail are all confirmed working on bench. Bring-up of motors, external RX, and the analog OSD chain is in progress. See [Known Issues](#known-issues--v04-fix-list) for V0.3 hardware bugs being addressed in V0.4.
+V0.3 boards have been received and brought up. Custom Betaflight target (`OPENFC_LITE_RP2350B`) builds and flashes; USB enumeration, IMU, SD card blackbox, and the switchable 10V VTX rail are all confirmed working on bench. Bring-up of motors, external RX, and the analog OSD chain is in progress. See [Known Issues](#known-issues--v04-fix-list) for V0.3 hardware bugs being addressed in V0.4.
 
 ## What's Different from OpenFC
 
-| Feature | OpenFC | OpenFC-ECO |
+| Feature | OpenFC | OpenFC-Lite |
 |---------|--------|------------|
 | MCU | RP2354B | RP2354B |
 | IMU | LSM6DSV16XTR | **ICM-42688-P** (V0.3 was LSM6DSV16XTR — see HW-12 in plan) |
@@ -83,10 +83,10 @@ V0.3 boards have been received and brought up. Custom Betaflight target (`OPENFC
 
 ## Firmware
 
-A custom Betaflight target lives in the [Betaflight config tree](https://github.com/betaflight/config) under `configs/OPENFC_ECO_RP2350B`:
+A custom Betaflight target lives in the [Betaflight config tree](https://github.com/betaflight/config) under `configs/OPENFC_LITE_RP2350B`:
 
 - `FC_TARGET_MCU = RP2350B`
-- `BOARD_NAME = OPENFC_ECO_RP2350B`
+- `BOARD_NAME = OPENFC_LITE_RP2350B`
 - `MANUFACTURER_ID = OPFC`
 - Motor map mirrors the V0.3 hardware (M1..M4 = GPIO31..GPIO28)
 - `USE_SDCARD_SPI` on SPI1 for blackbox
@@ -98,14 +98,14 @@ Build (requires a Betaflight checkout with `pico-sdk` and the BF-pinned ARM tool
 ```sh
 make picotool_install
 make arm_sdk_install
-make CONFIG=OPENFC_ECO_RP2350B
+make CONFIG=OPENFC_LITE_RP2350B
 ```
 
 Output is a `.uf2` in `obj/`. Hold BOOTSEL on the board, plug in USB, drag the UF2 onto the `RP2350` mass-storage drive that mounts.
 
 ## PIO Allocation
 
-The RP2350B has 3 PIO blocks × 4 state machines (12 total). OpenFC-ECO uses them as:
+The RP2350B has 3 PIO blocks × 4 state machines (12 total). OpenFC-Lite uses them as:
 
 | Block | Function |
 |---|---|
@@ -131,12 +131,12 @@ V0.3 hardware bugs being addressed in the next revision:
 | HW-10 | Board outline | 30×30 mm; BF stack standard is 30.5×30.5 mm | Bump to 30.5×30.5 |
 | HW-11 | Beeper | Verify active buzzer + NPN driver topology per §3.1.4 | Audit |
 
-The motor pin numbering issue (M1..M4 reversed vs the Betaflight `OPENFC_RP2350B` reference config) is **resolved in firmware** — the `OPENFC_ECO_RP2350B` Betaflight target maps motor pins to match the V0.3 silkscreen so no physical rework is needed.
+The motor pin numbering issue (M1..M4 reversed vs the Betaflight `OPENFC_RP2350B` reference config) is **resolved in firmware** — the `OPENFC_LITE_RP2350B` Betaflight target maps motor pins to match the V0.3 silkscreen so no physical rework is needed.
 
 ## Repository Structure
 
 ```
-OpenFC-ECO/
+OpenFC-Lite/
 ├── README.md
 ├── LICENSE
 ├── hardware/                ← KiCad 9 project, libraries, and production files

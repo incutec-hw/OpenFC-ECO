@@ -56,7 +56,7 @@ Additional rules for this zone:
 - Add flanking GND vias at layer transition for return-path continuity
 - Solid uninterrupted GND beneath D+/D- the entire length
 
-## Summary strategy for OpenFC-ECO
+## Summary strategy for OpenFC-Lite
 
 Top side (MCU-only vision not achievable — keeps these):
 - RP2354B MCU

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OpenFC-ECO Design Audit.
+OpenFC-Lite Design Audit.
 
 Parses the KiCad 9 design using kicad-skip (schematics) and pcbnew (PCB netlist)
 and produces a comprehensive hardware inventory + Betaflight MFG validation report.
@@ -201,7 +201,7 @@ def main():
     lines = []
     W = lines.append
 
-    W("# OpenFC-ECO Design Audit\n")
+    W("# OpenFC-Lite Design Audit\n")
     W(f"Generated from `{ROOT_SCH.name}` + `{PCB.name}` via kicad-skip + pcbnew.\n")
 
     # ---- 1. Hierarchy ----

@@ -1,4 +1,4 @@
-# OpenFC-ECO EMC Checklist
+# OpenFC-Lite EMC Checklist
 
 ## Noise sources (ranked by threat)
 
