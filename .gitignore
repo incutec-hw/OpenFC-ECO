@@ -38,9 +38,8 @@ fabrication-toolkit-options.json
 __pycache__/
 *.pyc
 
-# Claude
+# Claude (CLAUDE.md is a tracked project doc — do not ignore it)
 .claude/
-CLAUDE.md
 
 # Generated exports
 hardware/bom/
@@ -49,11 +48,13 @@ hardware/*_Paste.svg
 hardware/*.kicad_pcb.zip
 stencil_out/
 
-# Script output
+# Script output / generated analysis dumps (machine-specific paths, re-exportable)
 extracted_*.json
 ext2_*.json
 netlist_*.json
 hardware/tools/.lcsc_mpn_cache.json
+hardware/pcb.json
+hardware/schematic.json
 
 # Datasheets (downloadable)
 datasheets/
