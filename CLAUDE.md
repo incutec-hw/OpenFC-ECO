@@ -39,8 +39,8 @@ Design intent — a compact, low-cost FC:
 |---|---|---|---|---|
 | MCU | U2 | RP2354B (QFN-80, 2 MB flash) | C39843328 | — |
 | IMU | U9 | LSM6DSV16XTR (dev part) | C5267406 | SPI0; Rev 2 part undecided — see IMU |
-| 10V buck (switchable) | U3 | LMR51420YFDDCR (2A) | C7296200 | EN=GPIO11; 3A drop-in LMR51430YFDDCR (C5219261) |
-| 5V buck (always-on) | U4 | LMR51420YFDDCR (2A) | C7296200 | same 3A drop-in |
+| 10V buck (switchable) | U3 | LMR51430YFDDCR (3A) | C5219261 | EN=GPIO11; 4.7µH / 22µF 16V / FB 100k:6.49k → 9.85V |
+| 5V buck (always-on) | U4 | LMR51430YFDDCR (3A) | C5219261 | 4.7µH inductor |
 | 5V power mux | U5 | TPS2116DRLR | C3235557 | USB/BATT auto-select (clarify vs TPS2117 in Rev 2) |
 | 3.3V LDO | U7 | LP5912-3.3DRVR | C524780 | 500 mA |
 | 1.8V gyro LDO | U6 | NCV8187AMT180TAG | C893189 | 300 mA (Rev 2: ≥500 mA) |

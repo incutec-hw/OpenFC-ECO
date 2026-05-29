@@ -39,8 +39,8 @@ Rev 1 boards have been received and brought up. The custom Betaflight target bui
 ### Power tree
 | Rail | Source | Regulator | Notes |
 |---|---|---|---|
-| +10V (switchable) | +BATT | LMR51420YFDDCR (U3, 2A) | EN gated by GPIO11 (PINIO1). VTX/cam rail. 3A drop-in: LMR51430YFDDCR. |
-| +5V (always-on) | +BATT | LMR51420YFDDCR (U4, 2A) | 3A drop-in: LMR51430YFDDCR. |
+| +10V (switchable) | +BATT | LMR51430YFDDCR (U3, 3A) | EN gated by GPIO11 (PINIO1). VTX/cam rail. 4.7µH / 22µF 16V / FB 100k:6.49k → 9.85V. |
+| +5V (always-on) | +BATT | LMR51430YFDDCR (U4, 3A) | 4.7µH inductor. |
 | +5V (USB/BATT mux) | +5V_BUCK + +5V_USB | TPS2116DRLR (U5) | Auto-selects active source. |
 | +3.3V | +5V | LP5912-3.3DRVR (U7) | 500 mA LDO. |
 | +1.8V (gyro analog) | +5V | NCV8187AMT180TAG (U6) | Isolated supply for IMU noise rejection. |
@@ -131,41 +131,48 @@ The RP2350B has 3 PIO blocks × 4 state machines (12 total):
 
 Schematic changes for the next revision. **Schematic and board edits are done manually** — this list is the spec to run down.
 
-Legend: 🔧 field swap (value/part only) · 🔌 wiring / topology change · 🔍 decision / investigation
+Legend: 🔧 field swap (value/part only) · 🔌 wiring / topology change · 🔍 decision / investigation · ✅ resolved / done on Rev 2 schematic
 
 ### Power
-- 🔧 **HW-1 — C28** (10V buck output cap): 16V → **25V**, 22µF 0603. DC-bias derating + transient headroom.
-- 🔧 **HW-2 — R30** (10V FB, bottom of R29=100k divider): 6.8k → **6.34k** (E96). Corrects output 9.42V → 10.06V.
-- 🔧 **HW-3 — L2** (10V inductor): 4.7µH → **10µH** (FTC303020D100MBCA, C7423323). ⚠️ The 10µH was mistakenly applied to **L3 (5V rail)**; **L2 (10V)** is the rail that actually needs it.
-- 🔧 **L3** (5V inductor) field fix: Value says 10µH but MPN/LCSC still the old 4.7µH part. Make consistent — revert to 4.7µH unless 10µH is intended.
-- 🔧 **HW-5 — U3/U4** bucks (optional): LMR51420 (2A) → **LMR51430** (3A), C5219261. Drop-in, same SOT-23-6.
-- 🔧 **HW-8 — U6** gyro LDO: NCV8187 (300 mA) → **≥500 mA** in the same WDFN-6 footprint (part TBD; BF §3.1.2).
+- ✅ **HW-5 — U3/U4 bucks**: LMR51420 (2A) → **LMR51430YFDDCR** (3A, C5219261) — fitted, same SOT-23-6. *Clean the `TI ` prefix out of the MPN field so LCSC/MPN exact-match works for BOM/assembly.*
+- ✅ **HW-2 — R30** (10V FB, R29=100k top): 6.8k → **6.49k** (E96, what was in stock). Vout = 0.6·(1 + 100/6.49) = **9.85V** (~1.5% low — fine).
+- ✅ **HW-1 — C28** (10V buck output cap): **kept 22µF 16V X5R 0603** (decided against 25V). Voltage margin OK (10V on 16V); DC-bias derates effective C to ~7–11µF, which with the 4.7µH inductor raises 10V ripple but is acceptable for a **digital** VTX rail.
+- ✅ **HW-3 — L2/L3 inductors**: **both rails = 4.7µH (XRTC303020D4R7MBCA)** (decided against 10µH on L2). 10V ripple ≈1.17A p-p at 6S; peak well under the 3A part. *Verify the inductor Isat ≥ ~4A.*
+- ✅ **HW-8 — U6 gyro LDO**: **kept NCV8187AMT180TAG** (300 mA) for its PSRR — electrically ample (gyro analog is single-digit mA). ⚠️ BF §3.1.2 lists ≥500 mA; confirm whether that's hard-gated at submission. Low stock → consign if needed.
 
 ### MCU / USB (per Raspberry Pi RP2350 datasheet)
-- 🔧 **R12 / R13** USB series resistors: 30Ω → **27Ω**.
-- 🔧 **R14** VREG_AVDD resistor: 30Ω → **33Ω**.
-- 🔍 **D1** USB ESD (USBLC6-2P6): keep or remove? ESD on USB alone — but not the other exposed pads — is inconsistent. Decide.
+- ✅ **R12/R13/R14**: **no change** — keep all at 30Ω. USB FS is impedance-tolerant (30 vs 27Ω inaudible to enumeration); R14 (VREG_AVDD RC filter) 30 vs 33Ω is negligible. Single resistor value = better DFM.
+- 🔍 **D1 — USB ESD (USBLC6-2P6)**: removed on current schematic. ⚠️ **Recommend restoring.** USB is the most-handled / most-exposed interface; the RP2354B PHY isn't rated for system-level (IEC 61000-4-2 8kV) ESD, and the part is tiny/cheap/low-C. The "inconsistency" argument favors adding TVS to the *other* exposed I/O, not stripping USB. **Pending final call.**
 
 ### LEDs
-- 🔌 All status/indicator LEDs: **0201 → 0402** (0201 too fragile — broke during nut install). Footprint change.
-- 🔧 **HW-4 — D2** (LED0 status, GPIO12): green → **blue** (BF §3.1.4.6 requires blue LED0). D4/D5/D7/D10 are power-rail indicators.
-- 🔧 LED series resistors: raise (too bright); recompute per rail voltage. Production colors TBD (purple needs >3.3V).
+- ✅ All indicator LEDs **0201 → 0402** (0201 too fragile — broke during nut install).
+- ✅ **HW-4 — D2** (LED0 status, GPIO12): green → **blue** (XL-1005UBC, C22355736). BF §3.1.4.6.
+- ✅ **LED series resistors recalculated for ~1mA** (greens = XL-1005UGC, C965793). Vf@1mA estimated: blue ≈2.75V, green ≈2.6V.
+
+  | LED | Color | Source | Old R | **New R (E24)** | I |
+  |---|---|---|---|---|---|
+  | D2 (LED0) | Blue | GPIO12 (~3.3V) | 30R | **510Ω** | ~1.0mA |
+  | D7 | Green | +3.3V | 30R | **680Ω** | ~1.0mA |
+  | D5 | Green | +5V (5V_BUCK) | 200R | **2.4kΩ** | ~1.0mA |
+  | D4 | Green | +10V | 470R | **7.5kΩ** | ~1.0mA |
+
+  D2/D7 sit on 3.3V with low headroom → current is Vf-sensitive; if dim, D2→430Ω, D7→560Ω. Optional: D2→330Ω (~2mA) for daylight pre-arm visibility.
 
 ### Signals / connectivity (wiring — manual)
 - 🔌 **SPI0 cleanup**: group **GYRO_CS** into the SPI bus (with SCK/MOSI/MISO); drop the IMU **CLKIN/SYNC** net (GPIO15) — ST gyros have no SYNC. Same regroup for **FLASH_CS** (SD). ⚠️ If a TDK IMU is chosen, CLKIN is useful — couple to the IMU decision.
-- 🔌 **Remove SBUS inverter** (GPIO9 / SBUS_INVERT circuit).
+- ✅ **SBUS inverter removed** (GPIO9). Confirmed safe: BF PICO inverts at the RP2350 pad IO-mux (`gpio_set_inover/outover(GPIO_OVERRIDE_INVERT)`), auto-set for SBUS, works on native + PIO UARTs. The SBUS line wires straight to a UART/PIO-UART **RX** GPIO; firmware inverts.
 - 🔌 **HW-6 — ESC connector P1**: mirror reversed pinout **+ add telemetry pin** (BF 8-pin: Current = pin 3, Telem = pin 4). **Safety-critical** — current pinout shorts VBAT to a GPIO on a standard BF harness.
 - 🔌 **HW-7** — Add **battery reverse-polarity protection** (PMOS RPP).
-- 🔌 **HW-11 — Beeper**: active buzzer + NPN driver (300–1000Ω base R) per BF §3.1.4.
-- 🔌 **SD card**: wire compatible with both SPI and SDIO; use SPI for now, switch to SDIO via a BF update if supported on Pico.
+- ✅ **HW-11 — Beeper**: done — **N-MOS low-side switch** (Q2 DMN1150UFB-7B, R20 1k gate, R23 100k pulldown, BEEPER = GPIO6). Better than the NPN spec. *Verify: (1) flyback diode is across the buzzer (cathode → +supply, anode → drain), not just the FET body diode; (2) DMN1150UFB-7B is logic-level (turns on hard at 3.3V).*
+- 🔌 **SD card**: wire compatible with both SPI and SDIO; use SPI for now (see SDIO decision below).
 
 ### Decisions / investigations
 - 🔍 **IMU** — undecided for Rev 2; see [IMU](#imu).
-- 🔍 **U5 power MUX** — clarify TPS2116 vs TPS2117 (which part/behavior is intended).
-- 🔍 **SDIO on Pico** — does Betaflight support SDIO blackbox on RP2350B? (Madflight wants it too.)
-- 🔍 **CRIT-2 — motor order** M1–M4 reversed vs the Betaflight RP2350B reference config — resolve in the firmware target or swap silk.
+- ✅ **U5 power MUX** — **TPS2116DRLR** confirmed (auto-select USB/BATT).
+- ✅ **SDIO on Pico** — **stay on SPI.** Betaflight PICO supports SD blackbox over **SPI only** (PR #14567); no SDIO under `src/platform/PICO/`, no open PR. SDIO would give ~10× throughput (~25 MB/s vs ~2 MB/s — needed for 4kHz+ full-field logging) but requires a 4-bit HW bus *and* firmware that doesn't exist. SPI1 microSD is correct.
+- ✅ **CRIT-2 — motor order**: keep reversed silk (eases routing); **resolve in the BF target's DShot motor resource order** so M1–M4 map to the pads. Documented in the target.
 - 🔍 **CRIT-3 — FB_OSD upstream**: the RP2350B analog-OSD driver PR stack (#14882) is still open; no flyable upstream binary yet. Track before tape-out.
-- 🔍 Add **SWD connector** (4-pin JST SH: 3V3/GND/SWDIO/SWCLK) per BF.
+- ✅ **SWD connector** — **not adding.** RP2354B flashes over USB (UF2/BOOTSEL); SWD is only for live debug. Optional test pads cost nothing but no connector needed.
 
 ## Repository Structure
 

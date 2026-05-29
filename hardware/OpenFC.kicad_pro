@@ -715,7 +715,7 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "D10,R40,C30",
+    "used_designators": "D4-5,D7-8,D10,R40,C30",
     "variants": []
   },
   "sheets": [

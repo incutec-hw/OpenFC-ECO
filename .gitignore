@@ -49,6 +49,7 @@ hardware/*.kicad_pcb.zip
 stencil_out/
 
 # Script output / generated analysis dumps (machine-specific paths, re-exportable)
+analysis/
 extracted_*.json
 ext2_*.json
 netlist_*.json
